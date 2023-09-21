@@ -1,0 +1,2324 @@
+#
+msgid ""
+msgstr ""
+
+#: TASKS.md:block 1 (header)
+msgid "Learn Svelte making Snake"
+msgstr "Lær Svelte ved å lage Snake"
+
+#: TASKS.md:block 3 (header)
+msgid "Intro: We are going to make the game Snake in Svelte"
+msgstr "Intro: Vi skal lage spillet Snake i Svelte"
+
+#: TASKS.md:block 5 (header)
+msgid "Svelte"
+msgstr "Svelte"
+
+#: TASKS.md:block 12 (header)
+msgid "You need the following on your computer"
+msgstr "Du må ha følgende på datamaskinen din"
+
+#: TASKS.md:block 13 (unordered list)
+msgid "[node](https://nodejs.org/en/)"
+msgstr "[node](https://nodejs.org/en/)"
+
+#: TASKS.md:block 13 (unordered list)
+msgid ""
+"A text editor, preferably [one where you can add Svelte "
+"support](https://sveltesociety.dev/tools#editor-support)."
+msgstr ""
+"En tekstbehandler, fortrinnsvis [en der man kan installere støtte for "
+"Svelte](https://sveltesociety.dev/tools#editor-support)."
+
+#: TASKS.md:block 13 (unordered list)
+msgid ""
+"A clone of [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-"
+"snake-workshop)"
+msgstr ""
+"En klone av [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-"
+"snake-workshop)"
+
+#: TASKS.md:block 14 (paragraph)
+msgid "If you need help installing, check out [SETUP.md](./SETUP.md)."
+msgstr ""
+"Hvis du trenger hjelp til å installere ting, kan du sjekke "
+"[SETUP.md](./SETUP.md)."
+
+#: TASKS.md:block 15 (header)
+msgid "How this workshop tends to go"
+msgstr "Hvordan kurset pleier å være"
+
+#: TASKS.md:block 16 (paragraph)
+msgid ""
+"The repo [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-"
+"snake-workshop) contains everything you need. You can set the pace yourself."
+" It is possible to complete the workshop on your own."
+msgstr ""
+"Repoet [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-"
+"workshop) inneholder alt du trenger. Du kan bestemme tempo selv. Det er "
+"mulig å fullføre kurset helt på egen hånd."
+
+#: TASKS.md:block 18 (paragraph)
+msgid ""
+"When we hold the workshop physically or digitally, the instructors go "
+"through tasks and questions at irregular intervals. You can ask for help "
+"from the instructors whenever you want."
+msgstr ""
+"Når vi holder kurset fysisk eller digitalt, pleier kursholderne å gå gjennom"
+" oppgaver og spørsmål i fellesskap med ujevne mellomrom. Du kan be om hjelp "
+"fra kursholderne når som helst."
+
+#: TASKS.md:block 19 (paragraph)
+msgid ""
+"We have made nearly all styling beforehand, so that you can spend the "
+"maximum amount of time coding."
+msgstr ""
+"Vi har laget så å si all styling på forhånd, slik at man kan bruke mest "
+"mulig tid på kode."
+
+#: TASKS.md:block 20 (header)
+msgid "Part 1: Simple graphics"
+msgstr "Del 1: Enkel grafikk"
+
+#: TASKS.md:block 21 (paragraph)
+msgid ""
+"When you have finished this part, the game should show where the snake and "
+"the apple are on the board."
+msgstr ""
+"Når du er ferdig med denne delen, skal spillet vise hvor slangen og eplet er"
+" på brettet."
+
+#: TASKS.md:block 22 (header)
+msgid "Tutorial: What a Svelte file looks like"
+msgstr "Opplæring: Slik ser en Svelte-fil ut"
+
+#: TASKS.md:block 23 (paragraph)
+msgid ""
+"Svelte is a fusion of HTML, CSS and Javascript with some improvements. In "
+"Svelte, you can write these three languages in the same file. The parts are "
+"called “script”, “template” and “styling”."
+msgstr ""
+"Svelte er en sammensmeltning av HTML, CSS og Javascript med noen "
+"forbedringer. I Svelte kan man skrive disse tre språkene i én og samme fil. "
+"Delene kalles for «script», «template» og «styling»."
+
+#: TASKS.md:block 25 (paragraph)
+msgid ""
+"You use curly brackets inside *template* to insert variables, calculations "
+"and function calls."
+msgstr ""
+"Man bruker krøllparenteser inni *template* for å sette inn variabler, "
+"utregninger og funksjonskall."
+
+#: TASKS.md:block 27 (paragraph)
+msgid ""
+"Solve [the task from the Svelte tutorial about adding "
+"data](https://svelte.dev/tutorial/adding-data) before you continue."
+msgstr ""
+"Løs [oppgaven fra Svelte-opplæringen om å sette inn "
+"data](https://svelte.dev/tutorial/adding-data) før du går videre."
+
+#: TASKS.md:block 28 (header)
+msgid "Task 1.1: Place the apple"
+msgstr "Oppgave 1.1: Plasser eplet"
+
+#: TASKS.md:block 29 (paragraph)
+msgid "Open the file `src/routes/tasks/1.1/problem/+page.svelte`."
+msgstr "Åpne filen `src/routes/tasks/1.1/problem/+page.svelte`."
+
+#: TASKS.md:block 30 (paragraph)
+msgid ""
+"The board contains a `<div class=\"apple\" />`. The variable `apple` "
+"contains a coordinate. Your task is to place the apple on the square given "
+"by the coordinate."
+msgstr ""
+"Brettet inneholder en `<div class=\"apple\" />`. Variabelen `apple` "
+"inneholder en koordinat. Oppgaven din er å plassere eplet på den ruten på "
+"brettet som koordinaten angir."
+
+#: TASKS.md:block 31 (paragraph)
+msgid ""
+"The board's X axis points rightwards, and the Y axis downwards. The constant"
+" `CELL_SIZE` stores the side length of every square."
+msgstr ""
+"Brettets X-akse peker mot høyre, og Y-aksen peker nedover. Konstanten "
+"`CELL_SIZE` inneholder sidelengden til hver rute."
+
+#: TASKS.md:block 33 (paragraph)
+msgid "When you are finished, things should like this:"
+msgstr "Når du er ferdig, skal det se slik ut:"
+
+#: TASKS.md:block 35 (header)
+msgid "Hint: The style attribute"
+msgstr "Hint: Style-attributtet"
+
+#: TASKS.md:block 36 (paragraph)
+msgid ""
+"To override and add styling to elements in HTML (not just Svelte), use the "
+"attribute `style`. The attribute takes CSS statements."
+msgstr ""
+"For å overstyre og legge til stil på elementer i HTML (ikke bare Svelte), "
+"kan man bruke attributtet `style`. Inni style skriver man CSS-utsagn."
+
+#: TASKS.md:block 38 (header)
+msgid "Hint: left and top in CSS"
+msgstr "Hint: left og top i css"
+
+#: TASKS.md:block 39 (paragraph)
+msgid ""
+"Use the `left` and `top` CSS properties to move an HTML element along the "
+"`x` and `y` axes respectively."
+msgstr ""
+"Bruk CSS-egenskapene `left` og `top` for å forskyve elementer langs "
+"henholdsvis `x`- og `y`-aksene."
+
+#: TASKS.md:block 41 (header)
+msgid "Hint: To reveal almost everything"
+msgstr "Hint: For å avsløre nesten alt"
+
+#: TASKS.md:block 42 (paragraph)
+msgid "To place the apple, you need to do something like this:"
+msgstr "For å plassere eplet, må du gjøre omtrent som følger:"
+
+#: TASKS.md:block 44 (paragraph)
+msgid ""
+"You need to use `apple.x` and `apple.y` and `CELL_SIZE` to get these "
+"calculations to work."
+msgstr ""
+"Du må benytte deg av `apple.x` og `apple.y` samt `CELL_SIZE` for å få til "
+"disse regnestykkene."
+
+#: TASKS.md:block 45 (header)
+msgid "Tutorial: each blocks"
+msgstr "Opplæring: each-blokker"
+
+#: TASKS.md:block 46 (paragraph)
+msgid "The next task will require an each block."
+msgstr "Neste oppgave kommer til å kreve en each-blokk."
+
+#: TASKS.md:block 47 (paragraph)
+msgid ""
+"Solve this task from the Svelte tutorial about [how each blocks "
+"work](https://svelte.dev/tutorial/each-blocks)."
+msgstr ""
+"Løs denne oppgaven fra Svelte-opplæringen for å lære [hvordan each-blokker "
+"fungerer](https://svelte.dev/tutorial/each-blocks)."
+
+#: TASKS.md:block 48 (header)
+msgid "Task 1.2: Draw the snake on the screen"
+msgstr "Oppgave 1.2: Tegn slangen på skjermen"
+
+#: TASKS.md:block 49 (paragraph)
+msgid "Your task is to draw the snake on the board."
+msgstr "Oppgaven din er å tegne slangen på brettet."
+
+#: TASKS.md:block 50 (paragraph)
+msgid ""
+"The snake is a collection of coordinates stored in the variable `snake`. The"
+" first element in the collection is the head. Draw each coordinate in the "
+"collection as a `<div class=\"body-part\" />`."
+msgstr ""
+"Slangen er en samling koordinater som ligger i variabelen `snake`. Det "
+"første elementet er hodet. Tegn hver koordinat i kroppen som en `<div "
+"class=\"body-part\" />`."
+
+#: TASKS.md:block 51 (paragraph)
+msgid "The snake should look like this when you are done:"
+msgstr "Slangen skal se slik ut når du er ferdig:"
+
+#: TASKS.md:block 54 (paragraph)
+msgid ""
+"We use the calculation (`left: {foo.x * CELL_SIZE}px; top: {foo.y * "
+"CELL_SIZE}px`) multiple times in the code. The code will be easier to "
+"maintain if we put this calculation in one place."
+msgstr ""
+"Vi bruker utregningen (`left: {foo.x * CELL_SIZE}px; top: {foo.y * "
+"CELL_SIZE}px`) flere ganger i koden. Koden blir lettere å vedlikeholde "
+"dersom vi legger denne utregningen ett sted."
+
+#: TASKS.md:block 55 (paragraph)
+msgid ""
+"Your task is to move the calculation to a function, "
+"`calculatePositionAsStyle(coordinate)`, and replace all instances of the "
+"calculation with a call to this function. The function should take a "
+"coordinate as its only argument and return a string with values for top and "
+"left."
+msgstr ""
+"Oppgaven din er å flytte den nevnte utregningen over i en funksjon, "
+"`calculatePositionAsStyle(coordinate)`, og erstatte alle tilfeller der vi "
+"bruker utregningen med et kall til denne funksjonen. Funksjonen skal ta inn "
+"en koordinat og gi tilbake en streng med verdier for top og left."
+
+#: TASKS.md:block 56 (header)
+msgid "Part 2: Game controls"
+msgstr "Del 2: Spillkontroller"
+
+#: TASKS.md:block 57 (paragraph)
+msgid ""
+"When you have finished this part, it should be possible to control the snake"
+" with the arrow keys."
+msgstr ""
+"Når du er ferdig med denne delen, skal det gå an å styre slangen med "
+"piltastene."
+
+#: TASKS.md:block 58 (header)
+msgid "Tutorial: Listening for input"
+msgstr "Opplæring: Å lytte etter input"
+
+#: TASKS.md:block 59 (paragraph)
+msgid "Solve the following tasks from the Svelte tutorial before you go on:"
+msgstr "Løs følgende oppgaver fra Svelte-opplæringen før du går videre:"
+
+#: TASKS.md:block 60 (unordered list)
+msgid ""
+"[Listening for DOM events on an element](https://svelte.dev/tutorial/dom-"
+"events)"
+msgstr ""
+"[Lytte etter DOM-hendelser på et element](https://svelte.dev/tutorial/dom-"
+"events)"
+
+#: TASKS.md:block 60 (unordered list)
+msgid ""
+"[Listening for DOM events on the window](https://svelte.dev/tutorial/svelte-"
+"window)"
+msgstr ""
+"[Lytte etter DOM-hendelser på selve "
+"vinduet](https://svelte.dev/tutorial/svelte-window)"
+
+#: TASKS.md:block 61 (header)
+msgid "Task 2.1: Listen for keyboard input"
+msgstr "Oppgave 2.1: Lytt til trykk på tastaturet"
+
+#: TASKS.md:block 62 (paragraph)
+msgid ""
+"Your task is to listen for keyboard input and send it to the function "
+"`console.log`. The application should be able to “hear” keyboard input no "
+"matter which page is currently in focus, so that the user doesn’t have to "
+"click on a specific element on the page to play the game."
+msgstr ""
+"Oppgaven din er å lytte etter trykk på tastaturet og sende dem videre til "
+"funksjonen `console.log`. Applikasjonen skal kunne «høre» tastetrykk uansett"
+" hvilken del av nettsiden som har fokus, slik at brukeren ikke skal måtte "
+"trykke på et spesifikt element på siden for at spillet skal registrere "
+"tastetrykkene."
+
+#: TASKS.md:block 63 (paragraph)
+msgid ""
+"Avoid listening to keyboard input from the entire window (`svelte:window` "
+"refers to the window in its entirety). Instead, add a listener to the Svelte"
+" specific element that refers to `document.body`."
+msgstr ""
+"Unngå å lytte på tastetrykk fra hele vinduet (`svelte:window` viser til "
+"vinduet i sin helhet). Legg heller til en lytter på det Svelte-spesifikke "
+"elementet som viser til `document.body`."
+
+#: TASKS.md:block 64 (header)
+msgid "Hint: Keydown event"
+msgstr "Hint: Tastetrykk-hendelsen"
+
+#: TASKS.md:block 65 (paragraph)
+msgid ""
+"The event to listen for is called `keydown`.You listen for it in Svelte "
+"using `on:keydown`."
+msgstr ""
+"Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med "
+"`on:keydown`."
+
+#: TASKS.md:block 66 (header)
+msgid "Hint: svelte:body"
+msgstr "Hint: svelte:body"
+
+#: TASKS.md:block 67 (paragraph)
+msgid ""
+"You listen to `document.body` using the element `<svelte:body />`. You "
+"listen to events on it just like with any HTML-element."
+msgstr ""
+"Man lytter til `document.body` ved å bruke elementet `<svelte:body />`. Man "
+"kan lytte etter hendelser på det som med et hvilket som helst HTML-element."
+
+#: TASKS.md:block 68 (header)
+msgid "Tutorial: Changing variable values"
+msgstr "Opplæring: Å endre variabelverdier"
+
+#: TASKS.md:block 69 (paragraph)
+msgid ""
+"You will have to know how to change variable values in the next section. "
+"Solve the following tasks from the Svelte tutorial before you go on:"
+msgstr ""
+"Du kommer til å måtte vite hvordan du endrer variabler i den kommende "
+"seksjonen. Gjør følgende oppgaver fra Svelte-opplæringen før du fortsetter:"
+
+#: TASKS.md:block 70 (unordered list)
+msgid ""
+"[Updating regular variables](https://svelte.dev/tutorial/reactive-"
+"assignments)"
+msgstr ""
+"[Oppdatere vanlige variabler](https://svelte.dev/tutorial/reactive-"
+"assignments)"
+
+#: TASKS.md:block 70 (unordered list)
+msgid ""
+"[Updating arrays and objects](https://svelte.dev/tutorial/updating-arrays-"
+"and-objects)"
+msgstr ""
+"[Oppdatere arrays og objekter](https://svelte.dev/tutorial/updating-arrays-"
+"and-objects)"
+
+#: TASKS.md:block 71 (header)
+msgid "Task 2.2: Move the snake one step in the direction of a key press"
+msgstr "Oppgave 2.2: Beveg slangen ett steg i samme retning som et tastetrykk"
+
+#: TASKS.md:block 72 (paragraph)
+msgid ""
+"Your task is to translate key presses to movement. The snake should move one"
+" step in the given direction every time the user presses an arrow key. Avoid"
+" moving the snake when the user presses keys other than the arrow keys."
+msgstr ""
+"Oppgaven din er å oversette tastetrykk til bevegelse. Slangen skal bevege "
+"seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at"
+" slangen beveger seg når man trykker på andre taster."
+
+#: TASKS.md:block 92 (paragraph)
+msgid ""
+"To make this simpler, we have made a function "
+"`convertKeyboardKeyToDirection`, found in `src/lib/game-helpers.js`, which "
+"translates key names to directions. We use the cardinal directions to "
+"describe the directions on the board: West is left, north is up."
+msgstr ""
+"For å gjøre dette lettere, har vi laget en funksjon "
+"`convertKeyboardKeyToDirection` i `src/lib/game-helpers.js`, som oversetter "
+"fra tastetrykk til en retning. Vi bruker himmelretningene for å vise til "
+"retningene på brettet: Vest er venstre, nord er opp."
+
+#: TASKS.md:block 74 (paragraph)
+msgid ""
+"For now, the snake should also move if it hits itself or a wall. We will "
+"implement game over in a later task."
+msgstr ""
+"Inntil videre skal slangen bevege seg også om den treffer seg selv eller en "
+"vegg. Game over kommer i en senere oppgave."
+
+#: TASKS.md:block 75 (header)
+msgid "Hint: Important Array functions"
+msgstr "Hint: Viktige Array-funksjoner"
+
+#: TASKS.md:block 76 (unordered list)
+msgid ""
+"The simplest way to add elements to the start or end of an array is to use "
+"*spreading*: `[a, ...b]`. (Svelte does not react to push and pop; we will "
+"come back to this later.)"
+msgstr ""
+"Den enkleste måten å legge til elementer i starten eller slutten i et array,"
+" er å bruke spredning (*spreading*): `[a, ...b]`. (Svelte reagerer ikke på "
+"push og pop; dette kommer vi tilbake til senere.)"
+
+#: TASKS.md:block 76 (unordered list)
+msgid ""
+"The function [Array.prototype.slice](https://developer.mozilla.org/en-"
+"US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) is useful when "
+"you want to remove elements from the start and end of an array."
+msgstr ""
+"Funksjonen [Array.prototype.slice](https://developer.mozilla.org/en-"
+"US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) er nyttig når "
+"man vil fjerne elementer fra starten og slutten av et array."
+
+#: TASKS.md:block 97 (header)
+msgid "Hint: Helpful utilities in `$lib/game-helpers.js`"
+msgstr "Hint: Hjelpemidler i `$lib/game-helpers.js`"
+
+#: TASKS.md:block 98 (paragraph)
+msgid "In `$lib/game-helpers.js` you will find:"
+msgstr "I `$lib/game-helpers.js` finner man:"
+
+#: TASKS.md:block 79 (unordered list)
+msgid "`add(coordinateA, coordinateB)`, to add two vectors/coordinates."
+msgstr ""
+"`add(coordinateA, coordinateB)`, for å legge sammen to vektorer/koordinater."
+
+#: TASKS.md:block 79 (unordered list)
+msgid ""
+"`DIRECTION_TO_VECTOR`, to go from cardinal direction to direction vector."
+msgstr "`DIRECTION_TO_VECTOR`, for å gå fra himmelretning til retningsvektor."
+
+#: TASKS.md:block 100 (paragraph)
+msgid ""
+"Add the items `DIRECTION_TO_VECTOR, add, ` to the imported items in the "
+"`import { … } from \"$lib/game-helpers.js\"` statement at the top of "
+"`<script>` block to use them."
+msgstr ""
+"Legg elementene `DIRECTION_TO_VECTOR, add, ` til de importerte elementene i "
+"utsagnet `import { … } from \"$lib/game-helpers.js\"` på toppen av "
+"`<script>`-blokken for å bruke dem."
+
+#: TASKS.md:block 81 (header)
+msgid "Part 3: Logic"
+msgstr "Del 3: Logikk"
+
+#: TASKS.md:block 82 (paragraph)
+msgid ""
+"When you have finished this part, the player should be awarded points when "
+"the snake eats an apple. The game should stop if the snake enters an illegal"
+" position. And the game clock should tick, so that the snake moves at "
+"regular intervals, instead of when the player presses the keys."
+msgstr ""
+"Når du er ferdig med denne delen, skal spilleren få poeng når slangen spiser"
+" et eple. Spillet skal stoppe hvis slangen er på en ulovlig posisjon. Og "
+"spillklokka skal tikke, slik at slangen beveger seg på jevnlige tidspunkter,"
+" heller enn når man trykker på piltastene."
+
+#: TASKS.md:block 83 (header)
+msgid "Tutorial: The dollar sign in Svelte – reactive expressions."
+msgstr "Opplæring: Dollartegnet i Svelte – reaktive utsagn."
+
+#: TASKS.md:block 84 (paragraph)
+msgid ""
+"In spreadsheets, like Microsoft Excel, you can write formulas in the cells, "
+"for example `=A1*B3`. This places the calculation result in the cell, and "
+"the result is automatically updated when you change the contents of some "
+"cell that the calculation depends on. This is not the way things usually are"
+" in programming: You cannot say `a = 2; b = a * 2; a = 8` and expect `b` to "
+"be 16 instead of 4 because 8 doubled is 16. But you can make it this way in "
+"Svelte."
+msgstr ""
+"I regneark, som Microsoft Excel, kan man skrive formler i cellene, for "
+"eksempel `=A1*B3`. Da havner resultatet av regnestykket i cellen, og "
+"resultatet oppdaterer seg automatisk når man endrer innholdet i cellene som "
+"regnestykket avhenger av. Slik er det vanligvis ikke i programmering: Man "
+"kan ikke si `a = 2; b = a * 2; a = 8` og regne med at `b` nå er 16 i stedet "
+"for 4 fordi det dobbelte av 8 er 16. Men du kan få det til i Svelte."
+
+#: TASKS.md:block 85 (paragraph)
+msgid ""
+"In Svelte we can make the computer re-run a statement as a reaction to "
+"changes. This is done by putting a dollar sign in front of the statement. "
+"Statements that start with a dollar sign are called *reactive statements*, "
+"because the statement is re-run as a reaction to something else."
+msgstr ""
+"I Svelte kan vi få datamaskinen til å kjøre et *utsagn* (statement) på nytt "
+"som reaksjon på endringer. Dette gjør vi ved å sette et dollartegn foran "
+"utsagnet. Utsagn som starter med et slikt dollartegn kalles for et *reaktivt"
+" utsagn*, fordi utsagnet kjøres på nytt som en reaksjon på noe annet."
+
+#: TASKS.md:block 86 (paragraph)
+msgid ""
+"If the statement contains a variable assignment, Svelte can keep the value "
+"updated for us."
+msgstr ""
+"Hvis utsagnet inneholder en tilegning til en variabel, kan Svelte holde "
+"verdien oppdatert for oss."
+
+#: TASKS.md:block 88 (paragraph)
+msgid ""
+"Solve [the task about reactive statements from the Svelte "
+"tutorial](https://svelte.dev/tutorial/reactive-statements) before you go on."
+msgstr ""
+"Løs [oppgaven om reaktive utsagn fra Svelte-"
+"opplæringen](https://svelte.dev/tutorial/reactive-statements) før du går "
+"videre."
+
+#: TASKS.md:block 89 (paragraph)
+msgid ""
+"Almost any statement can come after the dollar sign, not just assignments. "
+"You can also write function calls and if-sentences:"
+msgstr ""
+"Nesten et hvilket som helst utsagn kan stå etter dollartegnet, ikke bare "
+"utregninger. Man kan også skrive funksjonskall og if-setninger:"
+
+#: TASKS.md:block 94 (paragraph)
+msgid ""
+"When you write game logic, you can often translate rules almost directly to "
+"reactive statements. “If `x === foo`, then do a, b and c” becomes `$: if (x "
+"=== foo) { a(); b(); c(); }`."
+msgstr ""
+"Når man skriver spill-logikk, kan man ofte oversette regler nesten direkte "
+"til reaktive utsagn: «Hvis `x === foo`, så gjør a, b og c» blir til `$: if "
+"(x === foo) { a(); b(); c(); }`."
+
+#: TASKS.md:block 95 (header)
+msgid "Task 3.1: Award points when the snake eats the apple"
+msgstr "Oppgave 3.1: Gi poeng når slangen spiser eplet"
+
+#: TASKS.md:block 96 (paragraph)
+msgid ""
+"Your task is to write a reactive statement with an if-sentence so that when "
+"the snake head is on the same coordinate as the apple, the score increases "
+"by 1."
+msgstr ""
+"Oppgaven din er å skrive et reaktivt utsagn med en if-setning slik at når "
+"slangehodet er på samme koordinat som eplet, øker antallet poeng med 1."
+
+#: TASKS.md:block 97 (paragraph)
+msgid ""
+"Create a variable `score`. This is the number of apples the snake has eaten."
+msgstr "Lag en variabel `score`. Dette er antallet epler slangen har spist."
+
+#: TASKS.md:block 98 (paragraph)
+msgid ""
+"When you have the score increase working, make sure that the apple is given "
+"a new random position on the board as soon as the snake eats it."
+msgstr ""
+"Når du har poeng-økningen til å virke, kan du sørge for at eplet får en ny, "
+"tilfeldig plassering på brettet idet slangen spiser det."
+
+#: TASKS.md:block 99 (paragraph)
+msgid ""
+"Note: You will save a lot of work in this task by using helper functions "
+"from `game-helpers.js`."
+msgstr ""
+"Merk: I denne oppgaven sparer du mye arbeid ved å bruke hjelpefunksjoner fra"
+" `game-helpers.js`."
+
+#: TASKS.md:block 100 (header)
+msgid "Hint: Help in game-helpers.js"
+msgstr "Hint: Hjelp i game-helpers.js"
+
+#: TASKS.md:block 101 (paragraph)
+msgid ""
+"In `game-helpers.js` you will find the function `isEqual` which says whether"
+" two coordinates are the same, and the function `pickRandomOpenSpace`, which"
+" draws a suitable location for the new apple."
+msgstr ""
+"I `game-helpers.js` finner man funksjonen `isEqual` som sier om to "
+"koordinater er like, og funksjonen `pickRandomOpenSpace`, som trekker en "
+"passelig plassering for det nye eplet."
+
+#: TASKS.md:block 102 (header)
+msgid "Task 3.2: Make the snake grow when it eats an apple"
+msgstr "Oppgave 3.2: Få slangen til å vokse når den spiser eplet"
+
+#: TASKS.md:block 103 (paragraph)
+msgid "Your task is to make the snake grow after it has eaten an apple."
+msgstr ""
+"Oppgaven din er å få slangen til å vokse etter at den har spist et eple."
+
+#: TASKS.md:block 104 (paragraph)
+msgid ""
+"To make things easier for you, we have extracted the logic for calculating "
+"the next snake as the function `getNextSnake(snake, direction, "
+"?shouldGrow)`. `shouldGrow` is an optional third argument, and is a boolean."
+msgstr ""
+"For å gjøre det lettere for deg, har vi trukket ut logikken for å regne ut "
+"neste slange som funksjonen `getNextSnake(snake, direction, ?shouldGrow)`. "
+"`shouldGrow` er et valgfritt tredje argument, og er en boolsk."
+
+#: TASKS.md:block 105 (header)
+msgid "Tutorial: Svelte component lifecycle, plus setInterval"
+msgstr "Opplæring: Svelte-komponenters livssyklus, pluss setInterval"
+
+#: TASKS.md:block 106 (paragraph)
+msgid ""
+"In order to solve the upcoming task, you will have to be able to solve the "
+"following tasks from the Svelte tutorial:"
+msgstr ""
+"For å løse den kommende oppgaven, kommer du til å måtte kunne det du lærer "
+"av følgende oppgaver i Svelte-opplæringen:"
+
+#: TASKS.md:block 107 (unordered list)
+msgid "[Task about `onMount`](https://svelte.dev/tutorial/onmount)"
+msgstr "[Oppgaven om `onMount`](https://svelte.dev/tutorial/onmount)"
+
+#: TASKS.md:block 107 (unordered list)
+msgid ""
+"[Task about `onDestroy`](https://svelte.dev/tutorial/ondestroy) (which also "
+"touches upon `setInterval`)"
+msgstr ""
+"[Oppgaven om `onDestroy`](https://svelte.dev/tutorial/ondestroy) (som "
+"inneholder litt om `setInterval`)"
+
+#: TASKS.md:block 108 (header)
+msgid "Task 3.3: Make the game tick"
+msgstr "Oppgave 3.3: Få spillet til å tikke"
+
+#: TASKS.md:block 109 (paragraph)
+msgid ""
+"Your task is to make the snake move at regular time intervals instead of "
+"when the user presses an arrow key. When the time to move has come, the "
+"snake should move in the direction that the user last pressed. In the demo "
+"version of the game, the time interval is 100 ms, but you can change it if "
+"you wish."
+msgstr ""
+"Oppgaven din er å få slangen til bevege seg ved faste tidsintervaller i "
+"stedet for idet man trykker på piltaster. Når tiden for å bevege seg er "
+"inne, skal slangen bevege seg i den retningen som spilleren sist oppga. I "
+"demoversjonen av spillet er tidsintervallet 100 ms, men du kan endre dette "
+"om du vil."
+
+#: TASKS.md:block 110 (header)
+msgid "Task 3.4: Stop ticking when the snake dies"
+msgstr "Oppgave 3.4 Stopp tikking når slangen dør"
+
+#: TASKS.md:block 113 (paragraph)
+msgid ""
+"To stop the ticking, we have extracted a function `stopTicking` that you "
+"might use."
+msgstr ""
+"For å stoppe tikkingen, har vi trukket ut en funksjon `stopTicking` som du "
+"kan bruke."
+
+#: TASKS.md:block 114 (header)
+msgid "Hint: Helper functions"
+msgstr "Hint: Hjelpefunksjoner"
+
+#: TASKS.md:block 116 (header)
+msgid "Hint: Reactivity"
+msgstr "Hint: Reaktivitet"
+
+#: TASKS.md:block 117 (paragraph)
+msgid ""
+"Remember reactivity and if-sentences, `$: if (x) { … }`, and how you can "
+"translate human-language game logic to such sentences almost verbatim."
+msgstr ""
+"Husk reaktivitet og if-setninger, `$: if (x) { … }`, og hvordan man nesten "
+"ordrett kan oversette spill-logikk til slike."
+
+#: TASKS.md:block 118 (paragraph)
+msgid ""
+"If we were to state the rules for game over in spoken language, we would "
+"have said something like:"
+msgstr ""
+"Hvis vi skulle formulert reglene for game over muntlig, hadde vi sagt noe "
+"slikt som:"
+
+#: TASKS.md:block 119 (unordered list)
+msgid ""
+"“If the snake head is outside the board or inside the snake itself, it's "
+"game over.”"
+msgstr ""
+"«Hvis slangehodet er utenfor brettet eller inni slangen selv, er det game "
+"over»"
+
+#: TASKS.md:block 119 (unordered list)
+msgid "“If the game is over, the ticking stops.”"
+msgstr "«Hvis spillet er slutt, stopper tikkingen.»"
+
+#: TASKS.md:block 120 (header)
+msgid "Task 3.5: Only react to perpendicular key presses"
+msgstr "Oppgave 3.5: Bare reager på vinkelrette tastetrykk"
+
+#: TASKS.md:block 121 (paragraph)
+msgid ""
+"Once you have gotten game over working, you might discover a problem: The "
+"snake dies if you press the arrow key that points in the opposite direction "
+"of where the snake is currently headed, because it ends up eating its own "
+"neck. This can also happen if you try to take a U-turn. In this and the next"
+" task, we will try to avoid this."
+msgstr ""
+"Idet du har fått game over til å virke, kommer du kanskje til å oppdage et "
+"problem: Slangen dør når man trykker tasten som går i motsatt retning av der"
+" slangen beveger seg for øyeblikket, fordi den spiser sin egen hals. Dette "
+"kan også skje når man er litt rask idet man prøver å ta en U-sving. I denne "
+"og den neste oppgaven skal vi prøve å unngå dette."
+
+#: TASKS.md:block 122 (paragraph)
+msgid ""
+"Your task is to make the snake react only to key presses that are "
+"perpendicular to the snake's current direction. If the snake is going north,"
+" the game should only register key presses from the left and right arrow "
+"keys. As with many other tasks, there is a function in `game-helpers.js` "
+"that can help you."
+msgstr ""
+"Oppgaven din er å sørge for at slangen kun reagerer på tastetrykk som er "
+"vinkelrette på slangens nåværende retning. Hvis slangen går nordover, skal "
+"spillet bare registrere tastetrykk på venstre og høyre piltast. Som med "
+"mange andre oppgaver, finnes det en funksjon som kan hjelpe deg i `game-"
+"helpers.js`."
+
+#: TASKS.md:block 123 (header)
+msgid "Task 3.6: Use a queue to keep track of future movements"
+msgstr "Oppgave 3.6: Bruk en kø til å holde styr på fremtidige bevegelser"
+
+#: TASKS.md:block 124 (paragraph)
+msgid ""
+"**This is a challenge task that has more to do with programming than Svelte "
+"itself. You can skip to the next task if you want.**"
+msgstr ""
+"**Dette er en utfordringsoppgave som har mer å gjøre med programmering enn "
+"Svelte i seg selv. Du kan hoppe til neste oppgave hvis du ønsker.**"
+
+#: TASKS.md:block 125 (paragraph)
+msgid ""
+"In the solution to task 3.5 that you find in `tasks/3.5-end`, you can still "
+"make the snake eat itself if you are quick. If the snake for example moves "
+"north and the player quickly presses ⬅️ followed by ⬇️, the game ends up "
+"registering ⬇️ as the next direction."
+msgstr ""
+"I løsningen på oppgave 3.5 som man finner i `tasks/3.5-end`, kan man "
+"fortsatt fremprovosere at slangen spiser seg selv hvis man er rask. Hvis "
+"slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ "
+"fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse."
+
+#: TASKS.md:block 126 (paragraph)
+msgid ""
+"We can avoid the problem by using a *queue* to keep track of the directions "
+"that the snake is going to move in. When the snake is going to move, we "
+"dequeue a direction and move the snake in that direction. This makes it "
+"possible to input advanced movements quickly without worrying about timing."
+msgstr ""
+"Vi kan unngå problemet ved å bruke en *kø* til å ta vare på retningene som "
+"slangen skal bevege seg i. Når slangen skal bevege seg, henter vi neste "
+"planlagte retning og beveger slangen i den. Dette gjør det mulig å trykke "
+"inn avanserte bevegelser raskt uten å tenke på timing."
+
+#: TASKS.md:block 127 (paragraph)
+msgid ""
+"We have created the variable `headDirectionQueue`, an array that keeps track"
+" of the directions the user has planned for the snake to move in. Instead of"
+" changing `headDirection` when the user presses a key, you should append the"
+" direction the user entered to `headDirectionQueue`. When it is time for the"
+" snake to move, the app should use the first perpendicular direction in the "
+"queue as the new value for `headDirection`. In other words: Remove all non-"
+"perpendicular directions from the start of the queue until you find a "
+"perpendicular direction. Use this element as the next `headDirection` and "
+"let the subsequent queue entries remain as they are."
+msgstr ""
+"Vi har laget variabelen `headDirectionQueue`, et array som holder styr på "
+"retningene brukeren har planlagt at slangen skal bevege seg i. I stedet for "
+"å legge neste planlagte retning rett i `headDirection`, skal du legge "
+"retningen sist i `headDirectionQueue`. Når tiden for at slangen skal bevege "
+"seg er inne, skal programmet bruke *den første vinkelrette retningen* i køen"
+" som ny verdi for `headDirection`. Med andre ord: Fjern alle ikke-"
+"vinkelrette bevegelser fra starten av køen frem til du finner en vinkelrett "
+"bevegelse. Bruk denne som neste `headDirection` og la påfølgende bevegelser "
+"bli liggende i køen som de er."
+
+#: TASKS.md:block 128 (paragraph)
+msgid "Make the necessary changes in `moveSnake` and `handleKeydown`."
+msgstr "Gjør de endringene som trengs i `moveSnake` og `handleKeydown`."
+
+#: TASKS.md:block 129 (header)
+msgid "Part 4: Animation"
+msgstr "Del 4: Animasjon"
+
+#: TASKS.md:block 130 (paragraph)
+msgid ""
+"When you have finished this part, the game should have an animated snake, "
+"skull and apples."
+msgstr ""
+"Når du er ferdig med denne delen, skal spillet ha en animert slange, "
+"hodeskalle og epler."
+
+#: TASKS.md:block 131 (header)
+msgid "Tutorial: Control blocks"
+msgstr "Opplæring: Kontroll-blokker"
+
+#: TASKS.md:block 132 (unordered list)
+msgid "[if-blocks](https://svelte.dev/tutorial/if-blocks)"
+msgstr "[if-blokker](https://svelte.dev/tutorial/if-blocks)"
+
+#: TASKS.md:block 132 (unordered list)
+msgid "[else-blocks](https://svelte.dev/tutorial/else-blocks)"
+msgstr "[else-blokker](https://svelte.dev/tutorial/else-blocks)"
+
+#: TASKS.md:block 132 (unordered list)
+msgid "[key-blocks](https://svelte.dev/tutorial/key-blocks)"
+msgstr "[key-blokker](https://svelte.dev/tutorial/key-blocks)"
+
+#: TASKS.md:block 133 (header)
+msgid "Tutorial: How transitions work"
+msgstr "Opplæring: Hvordan overganger fungerer"
+
+#: TASKS.md:block 134 (paragraph)
+msgid ""
+"Svelte comes with the module `svelte/transition`. This makes it possible to "
+"animate an element that enters or exits the document."
+msgstr ""
+"I Svelte følger modulen `svelte/transition` med. Den gjør at man kan animere"
+" et element som dukker opp i eller forsvinner fra dokumentet."
+
+#: TASKS.md:block 135 (unordered list)
+msgid "[The transition-attribute](https://svelte.dev/tutorial/transition)"
+msgstr "[transition-attributtet](https://svelte.dev/tutorial/transition)"
+
+#: TASKS.md:block 135 (unordered list)
+msgid ""
+"[Adding parameters to transitions](https://svelte.dev/tutorial/adding-"
+"parameters-to-transitions)"
+msgstr ""
+"[Hvordan man kan legge parametere på "
+"overganger](https://svelte.dev/tutorial/adding-parameters-to-transitions)"
+
+#: TASKS.md:block 135 (unordered list)
+msgid ""
+"[Different transitions for in and out](https://svelte.dev/tutorial/in-and-"
+"out)"
+msgstr ""
+"[Forskjellige overganger for inn og ut](https://svelte.dev/tutorial/in-and-"
+"out)"
+
+#: TASKS.md:block 136 (header)
+msgid "Task 4.1: Animate the apple"
+msgstr "Oppgave 4.1: Animer eplet"
+
+#: TASKS.md:block 137 (paragraph)
+msgid ""
+"Your task is to make the new apple pop up in its place when the snake eats "
+"the old apple."
+msgstr ""
+"Oppgaven din er å få det nye eplet til å sprette opp på plassen sin når "
+"slangen spiser det forrige eplet."
+
+#: TASKS.md:block 138 (paragraph)
+msgid ""
+"To make this work, you need to import the transition `scale` from "
+"`svelte/transition` and add it to the right element. To limit the animation "
+"to when the apple pops up, you should use `in:` instead of `transition:`. "
+"(You can also try [other transitions](https://svelte.dev/docs#run-time-"
+"svelte-transition).)"
+msgstr ""
+"For å få til dette skal du importere overgangen `scale` fra "
+"`svelte/transition` og legge den på riktig element. For å begrense "
+"animasjonen til når eplet dukker opp, skal du bruke `in:` i stedet for "
+"`transition:`. (Du kan også prøve [andre "
+"overganger](https://svelte.dev/docs#run-time-svelte-transition).)"
+
+#: TASKS.md:block 139 (header)
+msgid "Hint: Use a suitable block"
+msgstr "Hint: Bruk en egnet blokk"
+
+#: TASKS.md:block 140 (paragraph)
+msgid ""
+"Normally, Svelte only runs a transition animation if the HTML-element it is "
+"assigned to disappears from or enters the document. You can tell Svelte to "
+"re-run the transition when some value changes using a key-block: `{#key "
+"<value>}<content>{/key}`."
+msgstr ""
+"Vanligvis pleier Svelte bare å animere elementer når de dukker opp i eller "
+"forsvinner fra dokumentet. Man kan fortelle Svelte at elementet skal "
+"animeres på nytt når en verdi endrer seg ved å bruke en key-blokk: `{#key "
+"<verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når "
+"`verdi` endrer seg."
+
+#: TASKS.md:block 141 (header)
+msgid "Task 4.2: Add a skull when the snake dies"
+msgstr "Oppgave 4.2: Legg på en hodeskalle når slangen dør"
+
+#: TASKS.md:block 142 (paragraph)
+msgid ""
+"In the style block, there is a class `skull`. Your task is to make a "
+"`<div/>` with the class `skull` pop up when the snake dies. It should have "
+"the same coordinates as the snake's head."
+msgstr ""
+"I stylingen finnes det en klasse `skull`. Oppgaven din er å få en `<div/>` "
+"med klassen `skull` til å dukke opp når slangen dør. Den skal ha samme "
+"koordinat som slangehodet."
+
+#: TASKS.md:block 143 (paragraph)
+msgid "To animate the skull, add a `transition:scale` with a 300 ms delay."
+msgstr ""
+"For å animere hodeskallen, legg på en `transition:scale` med en forsinkelse "
+"på 300 ms."
+
+#: TASKS.md:block 144 (header)
+msgid "Task 4.3: Animate the snake's head"
+msgstr "Oppgave 4.3: Animer slangehodet"
+
+#: TASKS.md:block 145 (paragraph)
+msgid ""
+"In the style block, there is a class `head`. This styles and animates a "
+"snake head as long as you put it on an element with the class `body-part`. "
+"Your task is to add an animated snake head using this class."
+msgstr ""
+"I style-blokken finnes det en klasse `head`. Denne sørger for styling og "
+"animasjon av slangehodet så lenge man legger den på et element med klassen "
+"`body-part`. Oppgaven din er å legge inn et animert slangehode ved hjelp av "
+"denne klassen."
+
+#: TASKS.md:block 146 (paragraph)
+msgid ""
+"You do not need to use any `transition:…` here. The styling takes care of "
+"the animation as long as you put the right class in the right place."
+msgstr ""
+"Du trenger ikke å bruke noen `transition:…` her. Stylingen tar seg av "
+"animasjonen så lenge du legger riktig klasse på rett sted."
+
+#: TASKS.md:block 147 (header)
+msgid "Task 4.4: Animate the snake's tail"
+msgstr "Oppgave 4.4: Animer slangehalen"
+
+#: TASKS.md:block 148 (paragraph)
+msgid ""
+"Your task is to animate the snake's tail. There is a class, `tail`, that you"
+" can add to an element to get the same sliding animation as for the head, "
+"but without magnifying the body part."
+msgstr ""
+"Oppgaven din er å animere halen. Det finnes en klasse, `tail`, som man kan "
+"legge på et element for å få den samme gli-animasjonen som for hodet, men "
+"uten å forstørre kroppsdelen."
+
+#: TASKS.md:block 149 (paragraph)
+msgid "Add an animated tail to the snake."
+msgstr "Legg til en animert hale på slangen."
+
+#: TASKS.md:block 150 (paragraph)
+msgid ""
+"**Warning**: The tail may blink a little in all browsers except Firefox "
+"(including Chrome and Safari) due to a layout engine bug. You can count the "
+"task as done when you have an animated tail that sometimes blinks. The task "
+"solution contains a workaround for the blinking. Unfortunately, we can not "
+"reveal what the workaround is, because that would reveal the solution to the"
+" main task."
+msgstr ""
+"**Advarsel**: Halen kommer til å blinke litt i alle nettlesere utenom "
+"Firefox (deriblant Chrome og Safari) på grunn av en bug i layout-motoren. Du"
+" kan regne oppgaven som ferdig når du har en animert hale som blinker av og "
+"til. Fasiten inneholder et triks som fjerner blinkingen. Vi kan dessverre "
+"ikke fortelle hva trikset er, fordi det ville avslørt løsningen på "
+"hovedoppgaven."
+
+#: TASKS.md:block 189 (header)
+msgid "Part 5: Components"
+msgstr "Del 5: Komponenter"
+
+#: TASKS.md:block 152 (paragraph)
+msgid ""
+"When you have finished this part, the game should have a game over screen "
+"with a high score list fetched from a server. On the screen, you should be "
+"able to register your name and submit it to the server along with your "
+"latest score."
+msgstr ""
+"Når du er ferdig med denne delen, skal spillet ha en game-over-skjerm med "
+"toppliste hentet fra en tjener. På skjermen skal man også kunne registrere "
+"navnet sitt og sende det til tjeneren sammen med siste poengsum."
+
+#: TASKS.md:block 153 (header)
+msgid "Tutorial: Components"
+msgstr "Opplæring: Komponenter"
+
+#: TASKS.md:block 154 (paragraph)
+msgid "Do the following tasks from Svelte tutorial:"
+msgstr "Gjør følgende oppgaver fra Svelte-opplæringen:"
+
+#: TASKS.md:block 155 (unordered list)
+msgid "[Nested components](https://svelte.dev/tutorial/nested-components)"
+msgstr "[Nøstede komponenter](https://svelte.dev/tutorial/nested-components)"
+
+#: TASKS.md:block 155 (unordered list)
+msgid "[Declaring props](https://svelte.dev/tutorial/declaring-props)"
+msgstr "[Å erklære props](https://svelte.dev/tutorial/declaring-props)"
+
+#: TASKS.md:block 156 (header)
+msgid "Task 5.1: Create a component that appears when the game ends"
+msgstr "Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt"
+
+#: TASKS.md:block 157 (paragraph)
+msgid ""
+"The `GameOverModal.svelte` file is located in the same directory as "
+"`+page.svelte`. Your task is to make the component appear on screen when the"
+" game is over and make it show the player's score."
+msgstr ""
+"Filen `GameOverModal.svelte` ligger klar i samme mappe som `+page.svelte`. "
+"Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er "
+"over og at den viser poengsummen som spilleren fikk."
+
+#: TASKS.md:block 158 (paragraph)
+msgid ""
+"It's a bit tricky to get the component to appear on screen in an elegant "
+"way. We have therefore added some divs to the bottom of `+page.svelte`'s "
+"template section where you can mount the `<GameOver>` component."
+msgstr ""
+"Det er litt knotete å få komponenten til å vises på skjermen på en elegant "
+"måte. Derfor har vi lagt inn noen div-er nederst i template-delen av "
+"`+page.svelte` der man kan montere `<GameOver>`-komponenten."
+
+#: TASKS.md:block 198 (paragraph)
+msgid ""
+"Warning: This part is for people who have experience with network calls, "
+"promises and the like in Javascript. If you think the tasks are too hard, "
+"you can skip to part 7."
+msgstr ""
+"Advarsel: Oppgavene i denne delen er for folk som har erfaring med "
+"nettverkskall, løfter (*promises*) og lignende i Javascript. Om du synes "
+"oppgavene blir for vanskelige å løse, kan du hoppe til del 7."
+
+#: TASKS.md:block 161 (header)
+msgid "Tutorial: Await blocks"
+msgstr "Opplæring: Await-blokker"
+
+#: TASKS.md:block 162 (paragraph)
+msgid ""
+"Javascript *promises* are used for actions that could take time and possibly"
+" fail, often network requests. Svelte has a special block to handle "
+"promises, called the await-block."
+msgstr ""
+"Man bruker Javascript-løfter (*promises* på engelsk) til handlinger som kan "
+"ta tid og muligens kan mislykkes, ofte nettverksforespørsler. Svelte har en "
+"egen blokk for å ta seg av løfter, og denne heter await-blokken."
+
+#: TASKS.md:block 163 (paragraph)
+msgid ""
+"Solve [the task about await blocks from Svelte "
+"tutorial](https://svelte.dev/tutorial/await-blocks) before you proceed."
+msgstr ""
+"Løs [oppgaven om await-blokker fra Svelte-"
+"opplæringen](https://svelte.dev/tutorial/await-blocks) før du går videre."
+
+#: TASKS.md:block 202 (header)
+msgid "Task 6.1: Fetch the high score list from the API"
+msgstr "Oppgave 6.1: Hent topplista fra API-et"
+
+#: TASKS.md:block 165 (paragraph)
+msgid ""
+"The SvelteKit process which runs during development contains a small in-"
+"memory database keeping track of a high score list that you can fetch and "
+"post your last score to."
+msgstr ""
+"SvelteKit-prosessen som kjøres under utvikling inneholder en liten i-minne-"
+"database som holder styr på en toppliste som man kan hente ut tidligere "
+"poengsummer fra og poste sin siste poengsum til."
+
+#: TASKS.md:block 186 (paragraph)
+msgid ""
+"The `fetchScores` function from `src/lib/api-helpers.js` fetches the high "
+"score list. Your task is to import this function and display the high score "
+"list in the `<GameOver>` component you made."
+msgstr ""
+"Funksjonen `fetchScores` fra `src/lib/api-helpers.js` henter topplista. "
+"Oppgaven din er å importere denne funksjonen og vise topplista i «Game "
+"Over»-komponenten du har laget."
+
+#: TASKS.md:block 167 (paragraph)
+msgid ""
+"If you want to stick to the same visual theme as in the rest of the game, "
+"you can check the [documentation for the Nes.CSS theme](https://nostalgic-"
+"css.github.io/NES.css/) (or the task solution)."
+msgstr ""
+"Dersom du ønsker å holde deg til samme visuelle tema som i resten av "
+"spillet, kan du sjekke [dokumentasjonen for stilarket "
+"Nes.css](https://nostalgic-css.github.io/NES.css/) (eller fasiten)."
+
+#: TASKS.md:block 168 (paragraph)
+msgid ""
+"Warning: When working with promises, functions defined with the `function` "
+"keyword may behave strangely. To avoid bugs, use arrow functions instead "
+"(`const foo = () => {…}`)."
+msgstr ""
+"Advarsel: Akkurat når man jobber med løfter, kan navngitte funksjoner (de "
+"som er definert med nøkkelordet `function`) oppføre seg rart. For å unngå "
+"bugs, bruk pilfunksjoner (altså `const foo = () => {…}`)."
+
+#: TASKS.md:block 169 (header)
+msgid "Tutorial: Binding variables to input fields"
+msgstr "Opplæring: Binde variabler til input-felter"
+
+#: TASKS.md:block 170 (paragraph)
+msgid ""
+"Solve [the task about text inputs and "
+"binding](https://svelte.dev/tutorial/text-inputs) before you proceed."
+msgstr ""
+"Løs [oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-"
+"inputs) før du går videre."
+
+#: TASKS.md:block 209 (header)
+msgid "Task 6.2: Add name input field"
+msgstr "Oppgave 6.2: Legg til et felt der folk kan fylle inn navnet sitt"
+
+#: TASKS.md:block 172 (paragraph)
+msgid ""
+"Your task is to create a field where people can fill in their name and "
+"score. Also create a button that people can click on to submit their name "
+"and score in the format `{ name: string, score: number }`. You can use the "
+"`postScore` function from `api-helpers.js` to do this."
+msgstr ""
+"Oppgaven din er å lage et felt der folk kan fylle inn navnet sitt. Lag også "
+"en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet"
+" `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra "
+"`api-helpers.js` til dette."
+
+#: TASKS.md:block 173 (paragraph)
+msgid ""
+"When the score has been submitted, the component should fetch the updated "
+"high score list."
+msgstr ""
+"Når poengsummen er sendt inn, skal komponenten hente den oppdaterte "
+"topplisten."
+
+#: TASKS.md:block 174 (paragraph)
+msgid ""
+"Note: Because the database is not in permanent memory, any data you add to "
+"it will be lost when you restart the development server. If you cause the "
+"database to break by submitting invalid data, you can restart the "
+"development server to get a blank slate."
+msgstr ""
+"Merk: Fordi databasen ikke lagres til noe permanent minne, vil alt man har "
+"lagt til i den forsvinne når man starter utviklingstjeneren på nytt. Hvis du"
+" ødelegger databasen ved å sende inn feilformatert data, kan du starte "
+"utviklingstjeneren på nytt for å starte med blanke ark."
+
+#: TASKS.md:block 213 (header)
+msgid "Part 7: Game Over?"
+msgstr "Del 7: Game Over?"
+
+#: TASKS.md:block 176 (paragraph)
+msgid ""
+"Congratulations! **You were very smart to read through the tasks before "
+"starting!** Or maybe you actually did all the tasks? Wooooaaahh!!!!!1"
+msgstr ""
+"Gratulerer! **Du var veldig flink som leste gjennom oppgavesettet før du "
+"begynte!** Eller kanskje du faktisk har gjort alle oppgavene? "
+"Wooooaaahh!!!!!1"
+
+#: TASKS.md:block 216 (paragraph)
+msgid "Part 7 is a sandbox where you can do almost anything you want to."
+msgstr "Del 7 er en sandkasse der du kan gjøre omtrent hva du vil."
+
+#: TASKS.md:block 217 (header)
+msgid "Task 7.2: Improve the game"
+msgstr "Oppgave 7.2: Forbedre spillet"
+
+#: TASKS.md:block 180 (paragraph)
+msgid "There are still some possible improvements to the game:"
+msgstr "Det finnes fortsatt noen mulige forbedringer av spillet:"
+
+#: TASKS.md:block 182 (paragraph)
+msgid ""
+"We have not tried making the following things ourselves (yet), but we think "
+"they are both solvable – and fun:"
+msgstr ""
+"Følgende funksjoner har vi ikke selv prøvd å lage (ennå), men vi tror de er "
+"både løsbare – og gøyale:"
+
+#: TASKS.md:block 183 (unordered list)
+msgid ""
+"**Edge holes**: Holes on the board edges that the snake can use to teleport "
+"to an equivalent hole on the other side of the board, like Pacman."
+msgstr ""
+"**Hull i kantene**: Hull i brettets kanter som gjør at man kan komme ut av "
+"et tilsvarende hull på den andre siden, som i Pacman."
+
+#: TASKS.md:block 183 (unordered list)
+msgid ""
+"**Obstacles**: Some areas in the middle of the board are unreachable – call "
+"them walls, islands or whatever. They are as the edge of the board: The "
+"snake dies when it enters such an area."
+msgstr ""
+"**Hindre**: Visse områder midt på brettet er umulige å gå gjennom – kall dem"
+" vegger, øyer eller hva som helst. De er som kanten av brettet: Slangen dør "
+"når den treffer et slikt område."
+
+#: TASKS.md:block 183 (unordered list)
+msgid ""
+"**Golden apples**: Make golden apples appear from time to time in addition "
+"to the regular apple. 5 points are awarded if you eat them within a certain "
+"time."
+msgstr ""
+"**Gullepler**: Få gullepler til å dukke opp i ny og ne i tillegg til det "
+"vanlige eplet. Disse gir 5 ekstra poeng hvis man spiser dem innen en viss "
+"tid."
+
+#: TASKS.md:block 183 (unordered list)
+msgid ""
+"**Sound effects**: Add sounds when the snake eats the apple, when it dies "
+"and such. Remember to use headphones if you share your work area with other "
+"people."
+msgstr ""
+"**Lydeffekter**: Legg på lyder når slangen spiser eplet, når den dør og "
+"lignende. Husk å bruke hodetelefoner dersom du deler arbeidslokale med "
+"andre."
+
+#: TASKS.md:block 187 (unordered list)
+msgid "Pause"
+msgstr "Pause"
+
+#: TASKS.md:block 187 (unordered list)
+msgid "Start screen"
+msgstr "Startskjerm"
+
+#: TASKS.md:block 187 (unordered list)
+msgid "Restart button on the game over screen"
+msgstr "Omstart-knapp på game-over-skjermen"
+
+#: TASKS.md:block 242 (paragraph)
+msgid ""
+"Try to make these functions without looking at the code in "
+"`src/routes/finished-game`. You can use the solution to the last task as a "
+"starting point."
+msgstr ""
+"Prøv å legge til disse funksjonene uten å se på koden i "
+"`src/routes/finished-game`. Du kan bruke koden på siste oppgave som et "
+"utgangspunkt."
+
+#: TASKS.md:block 227 (header)
+msgid "Task 7.3: Other games"
+msgstr "Oppgave 7.3: Alternative spill"
+
+#: TASKS.md:block 190 (paragraph)
+msgid "Maybe you can make one of the following games:"
+msgstr "Kanskje du kan lage et av følgende spill:"
+
+#: TASKS.md:block 191 (unordered list)
+msgid ""
+"[Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [we have already "
+"tried](https://mos.knowit.no/)"
+msgstr ""
+"[Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [vi har allerede "
+"gjort et forsøk](https://mos.knowit.no/)"
+
+#: TASKS.md:block 191 (unordered list)
+msgid "[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))"
+msgstr "[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))"
+
+#: TASKS.md:block 230 (header)
+msgid "Task 7.4: After this course"
+msgstr "Oppgave 7.4: Etter dette kurset"
+
+#: TASKS.md:block 193 (paragraph)
+msgid ""
+"If you think Svelte is fun and want to learn more, we have the following "
+"recommendations:"
+msgstr ""
+"Om man synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:"
+
+#: TASKS.md:block 194 (unordered list)
+msgid "Finish [the Svelte tutorial](https://svelte.dev/tutorial/)"
+msgstr "Gjør [hele Svelte-opplæringen](https://svelte.dev/tutorial/)"
+
+#: TASKS.md:block 194 (unordered list)
+msgid ""
+"Check [the documentation](https://svelte.dev/docs) afterwards. You know "
+"almost all there is to know there after the tutorial."
+msgstr ""
+"Sjekk ut [dokumentasjonen](https://svelte.dev/docs) etterpå. Man kan nesten "
+"alt som står der etter opplæringen."
+
+#: TASKS.md:block 194 (unordered list)
+msgid ""
+"Try [SvelteKit](https://kit.svelte.dev/), Svelte's equivalent to Next.js and"
+" Nuxt.js."
+msgstr ""
+"Prøv ut [SvelteKit](https://kit.svelte.dev/), Sveltes motsvar til for "
+"eksempel Next.js og Nuxt.js."
+
+#: TASKS.md:block 194 (unordered list)
+msgid ""
+"Your first project could be a game collection website. Publish it and wait "
+"for “flash games” to make a comeback."
+msgstr ""
+"Ditt første prosjekt kan for eksempel være en hjemmeside fylt av alle "
+"spillene dine. Legg den ut i påvente av at «flash-spill» kommer på moten "
+"igjen."
+
+#: TASKS.md:block 195 (header)
+msgid "Final words"
+msgstr "Avsluttende ord"
+
+#: TASKS.md:block 196 (paragraph)
+msgid ""
+"All that remains to say is that we hope you have enjoyed our workshop. Game "
+"over!"
+msgstr ""
+"Da gjenstår det kun å si at vi håper du har kost deg med kurset vårt. Game "
+"over!"
+
+#: TASKS.md:block 53 (header)
+msgid "Task 1.3: Extract the position calculation as a function"
+msgstr "Oppgave 1.3: Trekk posisjonsutregningen ut i en funksjon"
+
+#: TASKS.md:block 112 (paragraph)
+msgid ""
+"Your task is to introduce *game over* by stopping the game clock when one of"
+" the said things occur. The game should stop as a *reaction* to the snake "
+"moving, and not as a part of `moveSnake`."
+msgstr ""
+"Oppgaven din er å innføre *game over* ved å stoppe spillklokka dersom en av "
+"de nevnte tilstandene inntreffer. Spillet skal stoppe som en *reaksjon* på "
+"at slangen har beveget seg, og ikke som en del av `moveSnake`."
+
+#: TASKS.md:block 115 (paragraph)
+msgid ""
+"You will find the helpful functions `isInsideBoard` and "
+"`isSnakeEatingItself` in `game-helpers.js`."
+msgstr ""
+"I `game-helpers.js` finner man de nyttige funksjonene `isInsideBoard` og "
+"`isSnakeEatingItself`."
+
+#: TASKS.md:block 4 (quote)
+msgid "Read in the language that you prefer:"
+msgstr "Les på det språket du foretrekker:"
+
+#: TASKS.md:block 201 (paragraph)
+#, fuzzy
+msgid "[tasks-nob]: ./locale/nob/TASKS.md"
+msgstr "[tasks-nob]: ."
+
+#: TASKS.md:block 9 (paragraph)
+msgid ""
+"![A quadratic checkered board containing a green snake and a red apple. "
+"Above the board, you can see that the score is 0.][gameplay-png]"
+msgstr ""
+"![Et kvadratisk rutet brett som inneholder en grønn slange og et rødt eple. "
+"Overfor brettet ser man at poengsummen er 0.][gameplay-png]"
+
+#: TASKS.md:block 201 (paragraph)
+#, fuzzy
+msgid "[gameplay-png]: ./assets/gameplay.png"
+msgstr "[gameplay-png]: ../../assets/gameplay.png"
+
+#: TASKS.md:block 37 (paragraph)
+msgid "![X axis pointing rightwards, Y axis pointing downwards][axes-png]"
+msgstr "![X-akse som peker mot høyre, Y-akse som peker ned.][axes-png]"
+
+#: TASKS.md:block 201 (paragraph)
+#, fuzzy
+msgid "[axes-png]: ./assets/axes.png"
+msgstr "[axes-png]: ../../assets/axes.png"
+
+#: TASKS.md:block 39 (paragraph)
+msgid ""
+"![The apple somewhere near the middle of the board][apple-near-middle-of-"
+"board-png]"
+msgstr ""
+"![Eplet et sted nær midten av brettet][apple-near-middle-of-board-png]"
+
+#: TASKS.md:block 201 (paragraph)
+#, fuzzy
+msgid "[apple-near-middle-of-board-png]: ./assets/task_1.1_end.png"
+msgstr "[apple-near-middle-of-board-png]: ../../assets/task_1.1_end.png"
+
+#: TASKS.md:block 57 (paragraph)
+msgid "![Apple and snake correctly positioned on the board][task-1-2-end-png]"
+msgstr "![Eple og slange plassert på brettet][task-1-2-end-png]"
+
+#: TASKS.md:block 201 (paragraph)
+#, fuzzy
+msgid "[task-1-2-end-png]: ./assets/task_1.2_end.png"
+msgstr "[task-1-2-end-png]: ../../assets/task_1.2_end.png"
+
+#: TASKS.md:block 182 (paragraph)
+msgid "![A screenshot of the Solitaire game over screen][solitaire-win-png]"
+msgstr "![Et bilde av game over-skjermen i kabal][solitaire-win-png]"
+
+#: TASKS.md:block 201 (paragraph)
+#, fuzzy
+msgid "[solitaire-win-png]: ./assets/solitaire_win.png"
+msgstr "[solitaire-win-png]: ../../assets/solitaire_win.png"
+
+#: TASKS.md:block 12 (paragraph)
+msgid ""
+"[Svelte](https://svelte.dev) is a language that you use to write single web "
+"pages. You can also use it to write components that you place in existing "
+"web pages (even if the page is written in a different language than Svelte)."
+msgstr ""
+"[Svelte](https://svelte.dev) er et språk som brukes til å skrive "
+"enkeltstående nettsider. Man kan også bruke det til å skrive komponenter som"
+" man legger inn på eksisterende nettsider (selv om nettsiden er skrevet på "
+"et annet språk enn Svelte)."
+
+#: TASKS.md:block 97 (paragraph)
+msgid ""
+"A reactive statement is run once when the app starts. Svelte runs it again "
+"every time a variable used inside the statement is given a new value. Svelte"
+" automatically notices which values a reactive statement depends on. You do "
+"not have to state this yourself, like with for example `React.useEffect`."
+msgstr ""
+"Et reaktivt utsagn kjøres én gang når appen lastes inn. Svelte kjører "
+"utsagnet på nytt hver gang en variabel som brukes inni utsagnet får en ny "
+"verdi. Svelte finner automatisk ut hvilke verdier et reaktivt utsagn "
+"avhenger av. Man trenger ikke oppgi avhengighetene selv, slik som med for "
+"eksempel `React.useEffect`."
+
+#: TASKS.md:block 98 (paragraph)
+msgid ""
+"Note: Svelte only notices changes that result from using the assignment "
+"operator, `=` (for example `foo.bar = \"baz\"`), and not those caused by "
+"method calls (such as `.push` and `.pop`). See [the task about updating "
+"arrays and objects](https://svelte.dev/tutorial/updating-arrays-and-objects)"
+" for a more detailed explanation."
+msgstr ""
+"Merk: Svelte merker bare endringer som kommer som følge av man bruker "
+"tilegnelsesoperatoren, `=` (for eksempel `foo.bar = \"baz\"`), og ikke som "
+"følge av metodekall (som `.push` og `.pop`). Se [opplæringsoppgaven om "
+"reaktivitet med objekter og arrays](https://svelte.dev/tutorial/updating-"
+"arrays-and-objects) for en dypere forklaring."
+
+#: TASKS.md:block 116 (paragraph)
+msgid "When the snake hits itself or a wall, it's *game over*."
+msgstr "Når slangen treffer seg selv eller en vegg, er det *game over*."
+
+#: TASKS.md:block 7 (paragraph)
+msgid ""
+"A workshop by [Eirik Vågeskar](https://github.com/vages), with the help of "
+"[Johannes Moskvil](https://github.com/johannbm), [Brede "
+"Kristensen](https://github.com/BredeYabo/), [Marcus "
+"Goplen](https://github.com/Goplen/), [Arve "
+"Seljebu](https://github.com/arve0/) and more colleagues at [Knowit "
+"Objectnet](https://www.knowit.no/kontakt/selskap/knowit-objectnet-as/)."
+msgstr ""
+"Et kurs av [Eirik Vågeskar](https://github.com/vages), med hjelp fra "
+"[Johannes Moskvil](https://github.com/johannbm), [Brede "
+"Kristensen](https://github.com/BredeYabo/), [Marcus "
+"Goplen](https://github.com/Goplen/), [Arve "
+"Seljebu](https://github.com/arve0/) og flere kolleger i [Knowit "
+"Objectnet](https://www.knowit.no/kontakt/selskap/knowit-objectnet-as/)."
+
+#: TASKS.md:block 30 (code)
+msgid ""
+"<!-- script -->\n"
+"<script>\n"
+"    let answer = 42;\n"
+"    let color = \"red\";\n"
+"</script>\n"
+"\n"
+"<!-- template -->\n"
+"<div style=\"color: {color}\">\n"
+"    Hello world, the answer is {answer}\n"
+"</div>\n"
+"\n"
+"<!-- styling -->\n"
+"<style>\n"
+"    div {\n"
+"        font-weight: bold;\n"
+"    }\n"
+"</style>\n"
+msgstr ""
+"<!-- script -->\n"
+"<script>\n"
+"    let answer = 42;\n"
+"    let color = \"red\";\n"
+"</script>\n"
+"\n"
+"<!-- template -->\n"
+"<div style=\"color: {color}\">\n"
+"    Hello world, svaret er {answer}\n"
+"</div>\n"
+"\n"
+"<!-- styling -->\n"
+"<style>\n"
+"    div {\n"
+"        font-weight: bold;\n"
+"    }\n"
+"</style>\n"
+
+#: TASKS.md:block 32 (code)
+msgid ""
+"<script>\n"
+"    let a = 42;\n"
+"</script>\n"
+"\n"
+"<div>The meaning of life is {a}.</div>\n"
+"<div>The square of the meaning is {a * a}</div>\n"
+"<div>The meaning of life has the sign {Math.sign(a)}</div>\n"
+msgstr ""
+"<script>\n"
+"    let a = 42;\n"
+"</script>\n"
+"\n"
+"<div>Meningen med livet er {a}.</div>\n"
+"<div>Kvadratet av meningen er {a * a}</div>\n"
+"<div>Meninngen med livet har fortegnet {Math.sign(a)}</div>\n"
+
+#: TASKS.md:block 43 (code)
+msgid "<div style=\"font-weight: bold;\">Bold text</div>\n"
+msgstr "<div style=\"font-weight: bold;\">Fet skrift</div>\n"
+
+#: TASKS.md:block 46 (code)
+msgid "<div style=\"top: 20px; left: 10px;\">Moved</div>\n"
+msgstr "<div style=\"top: 20px; left: 10px;\">Flyttet</div>\n"
+
+#: TASKS.md:block 49 (code)
+msgid ""
+"<div class=\"apple\" style=\"left: {calculation1}px; top: "
+"{calculation2}px;\" />\n"
+msgstr ""
+"<div class=\"apple\" style=\"left: {regnestykke1}px; top: "
+"{regnestykke2}px;\" />\n"
+
+#: TASKS.md:block 93 (code)
+msgid ""
+"<script>\n"
+"    let b = 3;\n"
+"    let c = 4;\n"
+"\n"
+"    $: a = (b * c) / 2; // a === 6\n"
+"    b = 6;\n"
+"</script>\n"
+"\n"
+"<div>\n"
+"    <!-- \n"
+"        Without `$: …`, a would have the value 6, \n"
+"        but is automatically given the value 12 after \n"
+"        b is given a new value.\n"
+"    -->\n"
+"    The triangle's base is {b}, its height is {c} and its area is {a}.\n"
+"</div>\n"
+msgstr ""
+"<script>\n"
+"    let b = 3;\n"
+"    let c = 4;\n"
+"\n"
+"    $: a = (b * c) / 2; // a === 6\n"
+"    b = 6;\n"
+"</script>\n"
+"\n"
+"<div>\n"
+"    <!-- \n"
+"\t\tUten `$: …`, ville a hatt verdien 6, \n"
+"\t\tmen den får automatisk verdien 12 idet \n"
+"\t\tb får en ny verdi. \n"
+"\t-->\n"
+"    Trekantens grunnlinje er {b}, dens høyde er {c}, og arealet dens er {a}.\n"
+"</div>\n"
+
+#: TASKS.md:block 96 (code)
+msgid ""
+"<script>\n"
+"    let lastUserInput = \"\";\n"
+"    $: if (lastUserInput === \"hello\") {\n"
+"        // Open the console to see this message\n"
+"        console.log(\"hello to you too\");\n"
+"    }\n"
+"</script>\n"
+"\n"
+"<label>Write something: <input bind:value={lastUserInput} /></label>\n"
+msgstr ""
+"<script>\n"
+"    let lastUserInput = \"\";\n"
+"    $: if (lastUserInput === \"hello\") {\n"
+"        // Åpne konsollen for å se denne beskjeden\n"
+"        console.log(\"hello to you too\");\n"
+"    }\n"
+"</script>\n"
+"\n"
+"<label>Skriv noe: <input bind:value={lastUserInput} /></label>\n"
+
+#: TASKS.md:block 97 (code)
+msgid ""
+"<script>\n"
+"    let lastUserInput = \"\";\n"
+"    // What the user said, as repeated by a parrot\n"
+"    $: parrotOutput = parrot(lastUserInput);\n"
+"\n"
+"    function parrot(something) {\n"
+"        return something + \", sqawk!\";\n"
+"    }\n"
+"</script>\n"
+"\n"
+"<label>Say something: <input bind:value={lastUserInput} /></label>\n"
+"<div>\n"
+"    The parrot says: {parrotOutput}\n"
+"</div>\n"
+msgstr ""
+"<script>\n"
+"    let lastUserInput = \"\";\n"
+"    // Det brukeren sa, som om en papegøye gjentok det\n"
+"    $: parrotOutput = parrot(lastUserInput);\n"
+"\n"
+"    function parrot(something) {\n"
+"        return something + \", sqawk!\";\n"
+"    }\n"
+"</script>\n"
+"\n"
+"<label>Si noe: <input bind:value={lastUserInput} /></label>\n"
+"<div>\n"
+"    Papegøyen sier: {parrotOutput}\n"
+"</div>\n"
+
+#: TASKS.md:block 31 (paragraph)
+msgid ""
+"Note: You can run the previous example and most examples in this document by"
+" pasting the source code into the [Svelte REPL](https://svelte.dev/repl). "
+"You can save them for later and share them with anyone using a URL, like "
+"this: <https://svelte.dev/repl/268a89ee9c4c444ebc04025925f37c38>"
+msgstr ""
+"Merk: Du kan kjøre det foregående eksempelet og de fleste eksemplene i dette"
+" dokumentet ved å lime inn kildekoden i [Svelte REPL-"
+"en](https://svelte.dev/repl). Du kan lagre dem og dele dem med hvem som "
+"helst ved hjelp av en URL, slik som her: "
+"<https://svelte.dev/repl/8376ae2d58464f76bb13f9d511f6f81f>"
+
+#: TASKS.md:block 202 (paragraph)
+#, fuzzy
+msgid "[tasks-eng]: ./TASKS.md"
+msgstr "[tasks-eng]: ../../TASKS.md"
+
+#: TASKS.md:block 24 (header)
+msgid "Every task has its own sub-folder"
+msgstr "Hver oppgave har sin egen undermappe"
+
+#: TASKS.md:block 25 (paragraph)
+msgid ""
+"We have divided the workshop into 6 parts, each containing several tasks. "
+"Every task starts with a task text, sometimes followed by hints. You can "
+"avoid or delay reading the hints if you want to challenge yourself."
+msgstr ""
+"Vi har delt kurset i 6 deler, hver bestående av flere oppgaver. Hver oppgave"
+" starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være "
+"å lese hintene dersom du trenger en ekstra utfordring"
+
+#: TASKS.md:block 45 (paragraph)
+msgid ""
+"What you type into your web browser to see the result of a "
+"`+page.svelte`-file depends on the names of the sub-folders that follow "
+"`src/routes` before finding the file. Some examples:"
+msgstr ""
+"Hva man skriver inn i nettleseren sin for å se resultatet av en gitt "
+"`+page.svelte`-fil avhenger av navnene på mappene som følger `src/routes` "
+"før man finner filen. Noen eksempler:"
+
+#: TASKS.md:block 30 (table)
+msgid "File location"
+msgstr "Filplassering"
+
+#: TASKS.md:block 30 (table)
+msgid "`src/routes/finished-game/+page.svelte`"
+msgstr ""
+
+#: TASKS.md:block 32 (paragraph)
+msgid ""
+"If you want to know more about how filenames are converted to routes, check "
+"out [the Svelte kit documentation on "
+"routing](https://kit.svelte.dev/docs/routing)."
+msgstr ""
+"Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte"
+" kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing)."
+
+#: TASKS.md:block 26 (paragraph)
+msgid ""
+"Every task has a corresponding folder: `src/routes/tasks/X.Y`, `X` being the"
+" current part and `Y` the current task within that part. For example, the "
+"folder `src/routes/tasks/2.1` contains the first task of part two."
+msgstr ""
+"Hver oppgave har en tilhørende mappe: `src/routes/tasks/X.Y` der `X` angir "
+"kursdelen og `Y` angir oppgaven innad i delen. For eksempel inneholder "
+"mappen `src/routes/tasks/2.1` første oppgave i del to."
+
+#: TASKS.md:block 27 (paragraph)
+msgid ""
+"Each task folder contains two sub-folders: `problem` and `solution`. The "
+"`problem` folder contains the unfinished code. The `solution` folder "
+"contains the task solution."
+msgstr ""
+"Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen"
+" `problem` inneholder den uferdige koden. Mappen `solution` inneholder "
+"løsningen på oppgaven."
+
+#: TASKS.md:block 30 (table)
+msgid "`src/routes/tasks/1.1/problem/+page.svelte`"
+msgstr ""
+
+#: TASKS.md:block 85 (header)
+msgid "Tutorial: Importing from files in `src/lib` using `$lib`"
+msgstr "Opplæring: Importere fra filer i `src/lib` ved å bruke `$lib`"
+
+#: TASKS.md:block 86 (paragraph)
+msgid ""
+"In the next task, you will be asked to import from a file located in "
+"`src/lib` using `$lib`. To quote [the SvelteKit documentation on "
+"`$lib`](https://kit.svelte.dev/docs/modules#$lib):"
+msgstr ""
+"I den neste oppgaven blir du bedt om å importere fra en fil som befinner seg"
+" i `src/lib` ved å bruke `$lib`. For å sitere [SvelteKit-dokumentasjonen om "
+"`$lib`](https://kit.svelte.dev/docs/modules#$lib):"
+
+#: TASKS.md:block 87 (quote)
+msgid "$lib"
+msgstr ""
+
+#: TASKS.md:block 87 (quote)
+msgid ""
+"This is a simple alias to `src/lib`, or whatever directory is specified as "
+"`config.kit.files.lib`. It allows you to access common components and "
+"utility modules without `../../../../` nonsense."
+msgstr ""
+"Dette er et enkelt alias til `src/lib`, eller hva enn slags mappe som er "
+"oppgitt som verdi for `config.kit.files.lib`. Det lar deg bruke "
+"felleskomponenter og -moduler uten `../../../../`-sludder."
+
+#: TASKS.md:block 88 (paragraph)
+msgid ""
+"You can import from files found in `src/lib` using the alias, like this:"
+msgstr "Slik importerer du fra filer som finnes i `src/lib` med aliaset:"
+
+#: TASKS.md:block 89 (code)
+msgid ""
+"// Importing a Javascript function from the file src/lib/bar.js\n"
+"import { foo } from \"$lib/bar.js\";\n"
+"// Importing a Svelte component from the file src/lib/Baz.svelte\n"
+"import Qux from \"$lib/Qux.svelte\";\n"
+msgstr ""
+"// Importere en Javascript-funksjon fra filen src/lib/bar.js\n"
+"import { foo } from \"$lib/bar.js\";\n"
+"// Importere en Svelte-komponent fra filen src/lib/Baz.svelte\n"
+"import Qux from \"$lib/Qux.svelte\";\n"
+
+#: TASKS.md:block 93 (paragraph)
+msgid ""
+"`+page.svelte` already imports a function from `$lib/game-helpers.js`. To "
+"use `convertKeyboardKeyToDirection`, add the function to the functions "
+"listed in the existing `import { … } from \"$lib/game-helpers.js\"` "
+"statement. Many of the functions in `game-helpers.js` are useful to this as "
+"well later tasks. You will save time if you take a moment to make yourself "
+"familiar with the file's contents."
+msgstr ""
+"`+page.svelte` importerer allerede en funksjon fra `$lib/game-helpers.js`. "
+"For å bruke `convertKeyboardKeyToDirection`, legger du til funksjonen blant "
+"de som er opplistet i det eksisterende `import { … } from \"$lib/game-"
+"helpers.js\"`-utsagnet. Mange av funksjonene i `game-helpers.js` er nyttige "
+"i denne såvel som senere oppgaver. Du kommer til å spare tid dersom du "
+"bruker et øyeblikk på å gjøre deg kjent med filens innhold."
+
+#: TASKS.md:block 18 (header)
+msgid "SvelteKit"
+msgstr ""
+
+#: TASKS.md:block 19 (paragraph)
+msgid ""
+"SvelteKit turns projects with many files written in Svelte into <q>high-"
+"performance web apps</q>, to quote [the <q>What is SvelteKit?</q> section in"
+" the SvelteKit documentation](https://kit.svelte.dev/docs/introduction#what-"
+"is-sveltekit). If you have some experience with web development (no worries "
+"if you don't) SvelteKit is to Svelte as Next.js is to React and Nuxt.js is "
+"to Vue."
+msgstr ""
+"SvelteKit gjør prosjekter med mange filer skrevet i Svelte om til "
+"<q>webapplikasjoner med høy ytelse</q>, for å sitere [<q>Hva er "
+"SvelteKit?</q>-delen av SvelteKit-"
+"dokumentasjonen](https://kit.svelte.dev/docs/introduction#what-is-"
+"sveltekit). Hvis du har litt erfaring med webutvkling (null stress hvis du "
+"ikke har det) så er SvelteKit for Svelte det Next.js er for React og Nuxt.js"
+" er for Vue."
+
+#: TASKS.md:block 20 (quote)
+msgid ""
+"Building an app with all the modern best practices is fiendishly "
+"complicated. Those practices include [build "
+"optimizations](https://vitejs.dev/guide/features.html#build-optimizations), "
+"so that you load only the minimal required code; [offline "
+"support](https://kit.svelte.dev/docs/service-workers); "
+"[prefetching](https://kit.svelte.dev/docs/link-options#data-sveltekit-"
+"prefetch) pages before the user initiates navigation; and [configurable "
+"rendering](https://kit.svelte.dev/docs/page-options) that allows you to "
+"render your app [on the server](https://kit.svelte.dev/docs/appendix#ssr) or"
+" [in the browser](https://kit.svelte.dev/docs/appendix#csr) at runtime or at"
+" [build-time](https://kit.svelte.dev/docs/page-options#prerender). SvelteKit"
+" does all the boring stuff for you so that you can get on with the creative "
+"part."
+msgstr ""
+"Å bygge en app som følger alle kunstens regler i dag er djevelsk komplisert."
+" Deriblant finner vi "
+"[byggoptimaliseringer](https://vitejs.dev/guide/features.html#build-"
+"optimizations), slik at du kan laste inn så lite kode som mulig; [bruk uten "
+"nettilkobling](https://kit.svelte.dev/docs/service-workers); "
+"[forhåndsinnlasting](https://kit.svelte.dev/docs/link-options#data-"
+"sveltekit-prefetch) av sider før brukeren trykker på siden; og [mulighet for"
+" å konfigurere sideopptegningen](https://kit.svelte.dev/docs/page-options) "
+"slik at du kan bestemme om appen skal tegnes på "
+"[tjeneren](https://kit.svelte.dev/docs/appendix#ssr) eller i "
+"[nettleseren](https://kit.svelte.dev/docs/appendix#csr) idet appen kjører "
+"eller [idet den bygges](https://kit.svelte.dev/docs/page-options#prerender)."
+" SvelteKit gjør alle de kjedelige oppgavene for deg slik at du kan "
+"konsentrere deg om de kreative."
+
+#: TASKS.md:block 20 (quote)
+msgid ""
+"&ndash; [The <q>What is SvelteKit?</q> section in the SvelteKit "
+"documentation](https://kit.svelte.dev/docs/introduction#what-is-sveltekit)"
+msgstr ""
+"&ndash; [<q>Hva er SvelteKit?</q>-delen av SvelteKit-"
+"dokumentasjonen](https://kit.svelte.dev/docs/introduction#what-is-sveltekit)"
+
+#: TASKS.md:block 21 (paragraph)
+msgid ""
+"This workshop emphasizes learning Svelte. You will also pick up the basics "
+"of SvelteKit along the way."
+msgstr ""
+"Denne workshoppen veklegger å lære bort Svelte. Du vil også få med deg "
+"grunnleggende SvelteKit på veien."
+
+#: TASKS.md:block 22 (paragraph)
+msgid ""
+"In our experience, both Svelte and SvelteKit have a tendency of getting out "
+"of the way once you get the hang of them. Perhaps you'll agree with us that "
+"using Svelte and SvelteKit feels more removing obstacles from existing web "
+"technologies rather than adding to them."
+msgstr ""
+"Vår erfaring er at både Svelte og SvelteKit har en hang til å forsvinne i "
+"bakgrunnen så snart du blir vant med dem. Kanskje vil du si deg enig med oss"
+" i at å bruke Svelte og SvelteKit føles mer som å fjerne hindre fra "
+"eksisterende webteknologier heller enn å legge til noe."
+
+#: TASKS.md:block 34 (header)
+msgid "Navigate to a folder's `+page.svelte` file to start a task"
+msgstr "Gå til en mappes `+page.svelte`-fil for å begynne med en oppgave"
+
+#: TASKS.md:block 38 (table)
+msgid "URL in local development"
+msgstr "URL mens man utvikler"
+
+#: TASKS.md:block 38 (table)
+msgid "URL when deployed"
+msgstr "URL når man gir ut appen"
+
+#: TASKS.md:block 38 (table)
+msgid "`src/routes/+page.svelte`"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "http://localhost:5173"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "https://svelte-snake-workshop.vercel.app"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "http://localhost:5173/finished-game"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "https://svelte-snake-workshop.vercel.app/finished-game"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "http://localhost:5173/tasks/1.1/problem"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "https://svelte-snake-workshop.vercel.app/tasks/1.1/problem"
+msgstr ""
+
+#: TASKS.md:block 40 (header)
+msgid ""
+"Aside: SvelteKit treats some other files that start with `+` differently"
+msgstr ""
+"Sidebemerkning: SvelteKit forskjellsbehandler noen filer som starter med `+`"
+
+#: TASKS.md:block 35 (paragraph)
+msgid ""
+"SvelteKit turns a file within `src/routes` and its subfolders into a web "
+"page if and only if that file is named `+page.svelte`. Files that start with"
+" characters *other* than `+` (for example `my-functions.js` and "
+"`MyComponent.svelte`) are used to store reusable functions and components "
+"that we build our web page with. SvelteKit will import things from such "
+"files if a `+page.svelte` file tells it to, but will <em>not</em> turn them "
+"into web pages."
+msgstr ""
+"SvelteKit gjør en fil innenfor mappen `src/routes` og dennes undermapper om "
+"til en nettside dersom, og bare dersom, filen heter `+page.svelte`. Filer "
+"som starter med *andre* tegn enn `+` (for eksempel `mine-funksjoner.js` og "
+"`MinKomponent.svelte`) brukes til å lagre gjenbrukbare funksjoner og "
+"komponenter som vi kan bygge nettsider med. SvelteKit importerer elementer "
+"fra slike filer dersom en `+page.svelte`-fil ber om det, men gjør dem "
+"<em>ikke</em> om til nettsider."
+
+#: TASKS.md:block 24 (header)
+msgid "Tools like SvelteKit make both users and developers happy"
+msgstr "Verktøy som SvelteKit gjør både brukere og utviklere glade"
+
+#: TASKS.md:block 25 (paragraph)
+msgid ""
+"If you are new to web development, you may wonder why tools like SvelteKit "
+"and the other mentioned technologies are needed. The short answer is <em>to "
+"keep costs down</em>."
+msgstr ""
+"Hvis webutvikling er nytt for deg, lurer du kanskje på hvorfor verktøy som "
+"SvelteKit og de andre vi har nevnt trengs. Det korte svaret er <em>for å "
+"holde konstnadene nede</em>."
+
+#: TASKS.md:block 28 (unordered list)
+msgid "whether the user has logged in"
+msgstr "hvorvidt brukeren har logget seg inn"
+
+#: TASKS.md:block 28 (unordered list)
+msgid ""
+"the high scores that other users have submitted (yes, that *was* "
+"foreshadowing)"
+msgstr ""
+"toppskårene som andre brukere har sendt inn til en toppliste (ja, det *var* "
+"et frempek)"
+
+#: TASKS.md:block 29 (paragraph)
+msgid ""
+"Writing a *web application* is harder than writing a *website*: Pages can "
+"not be saved as static files; they have to be created on the fly. Viewing a "
+"page requires the server and user's device to perform additional work to "
+"generate the changed page."
+msgstr ""
+"Å lage en *webapplikasjon* er vanskeligere enn å lage et *nettområde*: Sider"
+" kan ikke lagres som statiske filer; de må lages fortløpende. Å se på en "
+"side krever at tjeneren og maskinen som brukeren ser på siden med utfører "
+"ekstraarbeid for å tegne opp den endrede siden."
+
+#: TASKS.md:block 30 (paragraph)
+msgid ""
+"Generating the page and downloading it has <em>literal</em> costs attached "
+"to it:"
+msgstr ""
+"Å lage en ny side og laste den ned har <em>bokstavelig talt</em> sin pris:"
+
+#: TASKS.md:block 31 (unordered list)
+msgid ""
+"The server and the user's device and spend electrical power calculating the "
+"new page. **Power is money.**"
+msgstr ""
+"Tjeneren og brukerens maskin bruker strøm på å regne seg frem til den nye "
+"nettsiden. **Strøm er penger.**"
+
+#: TASKS.md:block 31 (unordered list)
+msgid ""
+"The server owners pays for the data it sends out. Most people use a phone to"
+" browse the web, often with a limited mobile data plan. **Data is money.**"
+msgstr ""
+"De som eier tjeneren betaler for dataen den sender ut. De fleste bruker en "
+"telefon til å surfe på nettet, ofte med en begrenset mobildataplan. **Data "
+"er penger.**"
+
+#: TASKS.md:block 31 (unordered list)
+msgid ""
+"The user spends his or her time waiting for the page. Users have a tendency "
+"to leave slow applications, generating less income for the web application's"
+" creator. **Money is money.**"
+msgstr ""
+"Brukeren bruker tiden sin på å vente på siden. Brukere pleier å forlate "
+"trege applikasjoner, som gjør at de som lager webapplikasjonen tjener mindre"
+" penger. **Penger er penger.**"
+
+#: TASKS.md:block 32 (paragraph)
+msgid ""
+"Web developers can take actions to reduce these costs. Doing so takes a lot "
+"of time, though. **Time is money.**"
+msgstr ""
+"Webutviklere kan ta grep for å få ned disse kostnadene. Dessverre krever "
+"dette tid. **Tid er penger.**"
+
+#: TASKS.md:block 28 (unordered list)
+msgid "what the user has done on previous pages"
+msgstr "hva en bruker har foretatt seg på tidligere sider"
+
+#: TASKS.md:block 26 (paragraph)
+msgid ""
+"Writing a classic static *website* can be as simple as creating an HTML-file"
+" for each page and uploading them to a server. A *web app* (short for web "
+"*application*) is a collection of *interactive* (as opposed to static) web "
+"pages. In a web *application*, the pages may look different depending on "
+"what data is stored on the server and the actions that the user has taken at"
+" that point in time. For example, a page may look different based on:"
+msgstr ""
+"Å skrive et tradisjonelt, statisk *nettområde* kan være så enkelt som å lage"
+" en HTML-fil for hver enkelt side og laste dem opp på en tjener. En *webapp*"
+" (eller webapplikasjon, om du vil) er en samling *interaktive* nettsider (i "
+"motsetning til statiske). I en *webapplikasjon* kan sidene se annerledes ut "
+"avhengig av hva slags data som er lagret på tjeneren og de handlingene som "
+"brukeren har foretatt seg på det daværende tidspunktet. For eksempel kan en "
+"side se annerledes ut basert på:"
+
+#: TASKS.md:block 219 (header)
+msgid "Tasks without solutions in the `finished-game` folder"
+msgstr "Oppgaver uten løsning i mappen `finished-game`"
+
+#: TASKS.md:block 222 (paragraph)
+msgid ""
+"If you feel like you are not ready to work without a solution yet, you can "
+"try a task for which a solution exists in the folder `src/routes/finished-"
+"game`."
+msgstr ""
+"Hvis du ikke føler deg klar for å jobbe uten fasit ennå, kan du prøve deg på"
+" en oppgave du finner løsningen på i mappen `src/routes/finished-game`."
+
+#: TASKS.md:block 223 (header)
+msgid "Tasks with solutions in the `finished-game` folder"
+msgstr "Oppgaver med løsning i mappen `finished-game`"
+
+#: TASKS.md:block 224 (paragraph)
+msgid ""
+"The game in the folder `src/routes/finished-game` has some functions that "
+"have not been turned into explicit tasks:"
+msgstr ""
+"Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner "
+"som det ikke er laget oppgaver for:"
+
+#: TASKS.md:block 197 (header)
+msgid "Part 6: Network"
+msgstr "Del 6: Nettverk"
+
+#: TASKS.md:block 50 (paragraph)
+msgid ""
+"SvelteKit treats *some* files differently if their names start with a `+`, "
+"for example:"
+msgstr ""
+"SvelteKit behandler *noen* filer annerledes dersom navnet deres starter med "
+"`+`, for eksempel:"
+
+#: TASKS.md:block 51 (unordered list)
+msgid ""
+"Files named [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-"
+"layout-svelte) apply a layout to the `+page.svelte` files in its containing "
+"folder and its sub-folders."
+msgstr ""
+"Filer som heter "
+"[`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte)"
+" påfører en utforming (_layout_) på `+page.svelte`-filene i mappen den "
+"befinner seg i og dennes undermapper."
+
+#: TASKS.md:block 51 (unordered list)
+msgid ""
+"The file `src/routes/+layout.svelte` adds a footer and document title to all"
+" pages in this project, as well as headers to the task pages."
+msgstr ""
+"Filen `src/routes/+layout.svelte` legger til en bunntekst og dokumenttittel "
+"på alle sider i dette prosjektet, så vel som overskrifter på oppgavesidene."
+
+#: TASKS.md:block 51 (unordered list)
+msgid ""
+"Files named [`+server.js` file](https://kit.svelte.dev/docs/routing#server) "
+"are turned into resources that you can interact with using HTTP."
+msgstr ""
+"Filer som heter [`+server.js` "
+"file](https://kit.svelte.dev/docs/routing#server) gjøres om til ressurser "
+"som du kan samhandle med ved hjelp av HTTP."
+
+#: TASKS.md:block 51 (unordered list)
+msgid ""
+"The file `src/routes/api/scores/+server.js` creates a simple high score "
+"database with an API."
+msgstr ""
+"Filen `src/routes/api/scores/+server.js` oppretter en enkel high score "
+"database med et API."
+
+#: TASKS.md:block 51 (unordered list)
+msgid ""
+"Files named [`+page.js`](https://kit.svelte.dev/docs/routing#page-page-js) "
+"are used to set rendering options for and fetch data to render a "
+"`+page.svelte` file."
+msgstr ""
+"Filer som heter [`+page.js`](https://kit.svelte.dev/docs/routing#page-page-"
+"js) brukes til å gjøre valg for hvordan en `+page.svelte`-fil skal tegnes "
+"opp og å hente data for å tegne den opp."
+
+#: TASKS.md:block 51 (unordered list)
+msgid ""
+"The file `src/routes/+page.js` tells SvelteKit to "
+"[*prerender*](https://kit.svelte.dev/docs/page-options#prerender) the front "
+"page."
+msgstr ""
+"Filen `src/routes/+page.js` ber SvelteKit om å "
+"[*forhåndsopptegne*](https://kit.svelte.dev/docs/page-options#prerender) "
+"forsiden."
+
+#: TASKS.md:block 52 (paragraph)
+msgid "You do not have to write such files yourself in this workshop."
+msgstr "Du trenger ikke å skrive slike filer selv i dette kurset."
+
+#: TASKS.md:block 198 (header)
+msgid "Task 5.2: Extract the board as a component"
+msgstr "Oppgave 5.2: Trekk ut brettet som en komponent"
+
+#: TASKS.md:block 199 (paragraph)
+msgid ""
+"`+page.svelte` has become a bit overwhelming. It handles two things at once:"
+" keeping track of the game *and* displaying it. We can make the file easier "
+"to read by letting another component display the game."
+msgstr ""
+"`+page.svelte` er blitt litt overveldende. Den tar seg av to ting på én "
+"gang:  å holde styr på spillet *og* vise det frem. Vi kan gjøre filen "
+"lettere å lese ved å la en annen komponent ta seg av å vise frem spillet."
+
+#: TASKS.md:block 201 (paragraph)
+msgid ""
+"Import and mount the new component in `+page.svelte`, replacing the code "
+"that was previously used to display the game. Delete the unused parts of the"
+" style and script blocks."
+msgstr ""
+"Importer og monter den nye komponenten i `+page.svelte`, slik at den "
+"erstatter koden som tidligere pleide å vise frem spillet. Slett de ubrukte "
+"delene i style og script-blokkene"
+
+#: TASKS.md:block 202 (header)
+msgid "If you mess up `+page.svelte`, use `git restore`"
+msgstr "Hvis du tuller til `+page.svelte`, bruk `git restore`"
+
+#: TASKS.md:block 203 (paragraph)
+msgid ""
+"You can use the command `git restore` to reset "
+"`src/routes/tasks/5.2/problem/+page.svelte` to its original state."
+msgstr ""
+"Du kan bruke kommandoen `git restore` for å stille "
+"`src/routes/tasks/5.2/problem/+page.svelte` tilbake til sin opprinnelige "
+"tilstand."
+
+#: TASKS.md:block 204 (paragraph)
+msgid ""
+"Open your terminal and navigate to the project's root folder. Paste the "
+"command `git restore src/routes/tasks/5.2/problem/+page.svelte` and press "
+"enter. The file should now be as it was when you started the task."
+msgstr ""
+"Åpne terminalen din og naviger til rotmappen i prosjektet. Lim inn "
+"kommandoen `git restore src/routes/tasks/5.2/problem/+page.svelte` og trykk "
+"enter. Filen skal nå være slik den var da du begynte på oppgaven."
+
+#: TASKS.md:block 205 (header)
+msgid "Hint: Go up and out"
+msgstr "Hint: Gå opp og ut"
+
+#: TASKS.md:block 206 (paragraph)
+msgid ""
+"This task will be unnecessarily hard if you start too deep into the HTML "
+"elements. Start as high up and as far out as you possibly can."
+msgstr ""
+"Denne oppgaven blir unødvendig vanskelig hvis du starter for dypt nedi HTML-"
+"elementene. Start så høyt oppe og så langt ute som det lar seg gjøre."
+
+#: TASKS.md:block 207 (header)
+msgid "Hint: How we solved this"
+msgstr "Hint: Hvordan vi løste dette"
+
+#: TASKS.md:block 208 (paragraph)
+msgid ""
+"**This hint will spoil almost everything. Read it only if you are completely"
+" stuck.**"
+msgstr ""
+"**Dette hintet vil avsløre nesten alt. Les det kun hvis du står fullstendig "
+"fast.**"
+
+#: TASKS.md:block 209 (paragraph)
+msgid ""
+"Start by copying `<div class=\"board\" … >` and its enclosed contents. Paste"
+" them into `Board.svelte`. Copy the entire `<style>` block to "
+"`Board.svelte`. Delete the `<div class=\"board\" … >` from `+page.svelte`."
+msgstr ""
+"Begynn med å kopiere `<div class=\"board\" … >` og innholdet den omslutter. "
+"Lim dem inn i `Board.svelte`. Kopier hele `<style>`-blokken fra "
+"`+page.svelte`."
+
+#: TASKS.md:block 210 (paragraph)
+msgid ""
+"Your editor should immediately complain about what data and functions from "
+"`<script>` that is missing in `Board.svelte`. The data or functions are is "
+"still used in `+page.svelte` will have to be passed to properties of "
+"`Board`. Data and functions that are unused in `+page.svelte`, can be cut "
+"and paste it into the `<script>` part of `Board`."
+msgstr ""
+"Tekstbehandleren din skal umiddelbart klage over hvilke data og funksjoner "
+"fra `<script>` som mangler i `Board.svelte`. Dataen eller funksjonene som "
+"fortsatt brukes i `+page.svelte` må sendes inn som til `Board`s egenskaper. "
+"Data og funksjoner som er ubrukt i `+page.svelte` kan klippes ut og limes "
+"inn i `<script>`-delen av `Board`."
+
+#: TASKS.md:block 211 (paragraph)
+msgid ""
+"Import `Board` to `+page.svelte` using `import Board from "
+"\"./Board.svelte\"`. Mount the component where the `<div class=\"board\" … "
+">` was located. Pass data to all the properties that you decided on."
+msgstr ""
+"Importer `Board` til `+page.svelte` med `import Board from "
+"\"./Board.svelte\". Monter komponenten der `<div class=\"board\" … >` pleide"
+" å være. Send data til alle egenskapene du bestemte deg for."
+
+#: TASKS.md:block 212 (paragraph)
+msgid ""
+"Once you see that things work, look at the output from the terminal where "
+"you started `npm run dev`. This output should tell you which parts of style "
+"are unused and in what file. Delete the parts that the output tells you are "
+"unused within the files you have changed."
+msgstr ""
+"Når du ser at ting virker, se på utdataen i terminalen der du startet `npm "
+"run dev`. Denne utdataen sier deg hvilke deler av style som er ubrukt og i "
+"hvilke filer. Slett de delene som utdataen forteller deg at er ubrukt i "
+"filene som du har endret."
+
+#: TASKS.md:block 200 (paragraph)
+msgid ""
+"Your task is to create a file named `Board.svelte` within "
+"`src/routes/tasks/5.2/problem`. Extract the code that is responsible for "
+"displaying the board, apple and snake in `+page.svelte` (from both the "
+"script, styling and template parts). Decide on what data to copy and what to"
+" pass as properties."
+msgstr ""
+"Oppgaven din er å lage en fil kalt `Board.svelte` inni "
+"`src/routes/tasks/5.2/problem`. Trekk ut koden som har ansvar for å vise "
+"frem brettet, eplet og slangen i `+page.svelte` (fra både script-, styling- "
+"og template-delene). Bestem hvilke data som skal kopieres og hvilke som skal"
+" sendes som egenskaper (properties)."
+
+#: TASKS.md:block 233 (header)
+msgid "Task 7.1: Deploy your game to Vercel"
+msgstr "Oppgave 7.1: Sjøsette spillet på Vercel"
+
+#: TASKS.md:block 234 (paragraph)
+msgid ""
+"Projects written in SvelteKit can be deployed to different web services. The"
+" easiest way to deploy your game is to the online service Vercel."
+msgstr ""
+"Prosjekter som er skrevet i SvelteKit kan sjøsettes til mange webtjenester. "
+"Den letteste måten å sjøsette spillet er til nettjenesten Vercel."
+
+#: TASKS.md:block 235 (header)
+msgid "Deploying to Vercel"
+msgstr "Sjøsette til Vercel"
+
+#: TASKS.md:block 236 (paragraph)
+msgid ""
+"Deploying a Svelte app to Vercel is as simple as typing `npx vercel` into "
+"your terminal. If you have not already signed up for or logged into Vercel, "
+"the tool will help you do that."
+msgstr ""
+"Å sjøsette en Svelte-app til Vercel er så enkelt som å skrive `npx vercel` i"
+" terminalen. Hvis du ikke allerede har registrert deg eller logget inn på "
+"Vercel, vil verktøyet hjelpe deg å gjøre det."
+
+#: TASKS.md:block 237 (paragraph)
+msgid ""
+"Give the default answer to all questions. After a minute or two, Vercel will"
+" have deployed the app for you. Its final output should be the URL where you"
+" can find your app."
+msgstr ""
+"Svar med standardsvaret på alle spørsmål. Etter ett minutt eller to vil "
+"Vercel ha sjøsatt appen for deg. Det siste den skriver ut skal være URL-en "
+"der du finner appen din."
+
+#: TASKS.md:block 238 (paragraph)
+msgid "If you want to update your app, run `npx vercel` again."
+msgstr "Hvis du vil oppdatere appen, kjør `npx vercel` igjen."
+
+#: TASKS.md:block 239 (header)
+msgid "Other services that you can deploy to"
+msgstr "Andre tjenester du kan sjøsette til"
+
+#: TASKS.md:block 240 (paragraph)
+msgid ""
+"Under the hood, SvelteKit compiles a web app in two steps: It first compiles"
+" the app into an intermediary format, found in the folder `.svelte-kit`. "
+"This output is then run through an adapter which converts this output to the"
+" environment that you want to deploy to. This may be some other hosting "
+"service, like Cloudflage Pages or Netlify. You can also deploy the app to a "
+"server that you control yourself."
+msgstr ""
+"Under panseret kompilerer SvelteKit en webapp i to trinn: Den kompilerer "
+"først appen til et mellomformat, som finnes i mappen `.svelte-kit`. Denne "
+"utdataen blir deretter kjørt gjennom et adapter som tilpasser utdataen til "
+"miljøet du vil sjøsette til. Dette kan være en annen vertstjeneste, som "
+"Cloudflare Pages eller Netlify. Du kan også legge appen på en webtjener du "
+"styrer selv."
+
+#: TASKS.md:block 241 (paragraph)
+msgid ""
+"[The <q>Adapters</q> section in the SvelteKit "
+"documentation](https://kit.svelte.dev/docs/adapters) lists a number of "
+"officially supported adapters. If you want to run your own server, the "
+"`node` or `static` adapters will probably be the way to go. The "
+"documentation also points you in the direction of community-provided "
+"adapters that you can use if none of the officially supported adapters suit "
+"your needs."
+msgstr ""
+"[Seksjonen <q>Adapters</q> i SvelteKit-"
+"dokumentasjonen](https://kit.svelte.dev/docs/adapters) ramser opp en rekke "
+"offisielt støttede adaptere. Hvis du vil ta ansvar for webtjeneren din selv,"
+" er adapterene `node` eller `static` sannsynligvis det du skal bruke. "
+"Dokumentasjonen peker deg også i retning av adaptere som vedlikeholdes av "
+"frivillige hvis ingen av de offisielle adapterene passer behovene dine."
+
+#: TASKS.md:block 14 (paragraph)
+msgid ""
+"The blogpost [<q>Introducing Svelte, and Comparing Svelte with React and "
+"Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-"
+"svelte-comparing-with-react-vue) gives a thorough introduction to Svelte and"
+" how it compares to React and Vue (TL;DR: smaller files, better developer "
+"experience)."
+msgstr ""
+"Bloggposten [<q>Introducing Svelte, and Comparing Svelte with React and "
+"Vue</q> av Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-"
+"svelte-comparing-with-react-vue) presenterer Svelte grundig og måler det opp"
+" mot React og Vue (TL;DR: mindre filstørrelse, bedre utvikleropplevelse)."
+
+#, fuzzy
+#~ msgid "[transfer-size-png]: ./assets/transfer_size.png"
+#~ msgstr "[transfer-size-png]: ../../assets/transfer_size.png"
